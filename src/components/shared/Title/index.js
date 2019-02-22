@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function index() {
-  return (
-    <div>
-      Hola
-    </div>
-  )
-}
+// STYLES
+import { Text } from './styles'
+
+const Title = ({ children }) => (
+  <Text>{children}</Text>
+)
+
+export default Title
