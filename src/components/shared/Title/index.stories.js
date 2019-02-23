@@ -2,6 +2,4 @@ import React from 'react'
 import { storiesOf } from '@storybook/react';
 import Title from './'
 
-storiesOf('Title', module)
-.add('default', () => <Title />)
-.add('small', () => <Title />)
+storiesOf('Title', module).add('default', () => <Title/>)
