@@ -1,10 +1,8 @@
 import React from 'react';
 
 // COMPONENTS
-import Title from 'components/shared/Title';
+import Layouthome from 'components/LayoutHome';
 
-const Home = () => (
-   <Title>Stevene</Title>
-);
+const Home = () => <Layouthome />
 
 export default Home;
