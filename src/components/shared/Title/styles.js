@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const Text = styled.h1`
-   color: ${props => props.theme.primaryColor}
+   font-size: ${props => props.theme.size.font.xlg}
 `
