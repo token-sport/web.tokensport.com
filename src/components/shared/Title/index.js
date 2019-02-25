@@ -14,7 +14,7 @@ Title.defaultProps = {
 
 Title.propTypes = {
   children: oneOfType([array, string, object]),
-  size: oneOf(['xlg', 'lg', 'sm']),
+  size: oneOf(['xlg', 'lg', 'sm', 'xmd', 'xsm']),
   uppercase: bool,
   bold: string,
   margin: string
