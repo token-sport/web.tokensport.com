@@ -1,5 +1,5 @@
 import React from 'react';
-import { array, string, oneOfType } from 'prop-types';
+import { array, string, oneOfType, object } from 'prop-types';
 
 // STYLES
 import { Description } from './styles'
@@ -13,7 +13,7 @@ DescriptionComponent.defaultProps = {
 }
 
 DescriptionComponent.propTypes = {
-  children: oneOfType([array, string]),
+  children: oneOfType([array, string, object]),
   size: string,
   margin: string,
   direction: string
