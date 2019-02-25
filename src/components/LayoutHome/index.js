@@ -1,14 +1,14 @@
 import React from 'react'
 
 // COMPONENTS
-import Title from 'components/shared/Title';
+import MainInfo from './MainInfo';
 
 // STYLES
-import { Container, WordsColor } from './styles';
+import { Container } from './styles';
 
 const LayoutHome = () => (
   <Container>
-    <Title>Comparte tus <WordsColor color="neonOrange">emociones</WordsColor></Title>
+    <MainInfo />
   </Container>
 )
 
