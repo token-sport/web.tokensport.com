@@ -1,14 +1,22 @@
 import React from 'react';
-import { array, string } from 'prop-types';
+import { array, string, oneOfType } from 'prop-types';
 
 // STYLES
 import { Description } from './styles'
 
-const DescriptionComponent = ({ size, children }) => <Description size={size}>{children}</Description>
+const DescriptionComponent = ({ size, children, margin, direction }) =>
+  <Description margin={margin} size={size} direction={direction}>{children}</Description>
+
+DescriptionComponent.defaultProps = {
+  margin: '0px',
+  direction: 'unset'
+}
 
 DescriptionComponent.propTypes = {
-  children: array,
-  size: string
+  children: oneOfType([array, string]),
+  size: string,
+  margin: string,
+  direction: string
 }
 
 export default DescriptionComponent

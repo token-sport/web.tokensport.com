@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Button = styled.button`
   text-transform: uppercase; 
   border-radius: ${({ theme }) => theme.radius.soft};
-  width: ${({ small }) => small ? '100px' : '150px'};
-  height: 35px;
+  width: ${({ small }) => small ? '100px' : '170px'};
+  height: 45px;
   font-family: ${ ({ theme }) => theme.family.nunito};
   background-color: ${({ transparent }) => transparent ? 'transparent' : 'unset'};
   background-image: ${({ transparent }) => transparent ? 'none' : 'linear-gradient(to right, #39b0e3, #2ea1d4, #2291c5, #1483b6, #0074a7)'}; 
@@ -14,6 +14,8 @@ export const Button = styled.button`
   cursor: pointer;
   font-weight: 100;
   letter-spacing: 0.5px;
+  margin: ${({ margin }) => margin};
+  font-size: 14px;
   :active {
     transition: 500ms;
     transform: scale(0.9);
