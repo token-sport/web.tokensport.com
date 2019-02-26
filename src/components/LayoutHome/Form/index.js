@@ -30,7 +30,7 @@ const FormHome = () => (
         name="email"
         type="email"
         width="300px" />
-      <Button text="Unirse" small margin="30px 0" />
+      <Button text="Unirse" small margin="30px 0 0 0" />
     </div>
   </Container>
 )
