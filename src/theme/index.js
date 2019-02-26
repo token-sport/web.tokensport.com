@@ -40,6 +40,7 @@ export default {
   },
   radius: {
     soft: "10px",
+    medium: "20px",
     hard: "50px"
   }, 
   family: {
