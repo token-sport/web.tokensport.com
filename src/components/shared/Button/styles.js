@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Button = styled.button`
   text-transform: uppercase; 
   border-radius: ${({ theme }) => theme.radius.soft};
-  width: ${({ small }) => small ? '100px' : '170px'};
+  width: ${({ small }) => small ? '120px' : '170px'};
   height: 45px;
   font-family: ${ ({ theme }) => theme.family.nunito};
   background-color: ${({ transparent }) => transparent ? 'transparent' : 'unset'};
