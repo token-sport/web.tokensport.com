@@ -10,5 +10,5 @@ const Container = ({ text }) => (
   </div>
 )
 
-storiesOf('Links', module)
+storiesOf('Link', module)
   .add('default', () => <Container text="Features" />)
