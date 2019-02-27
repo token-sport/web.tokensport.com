@@ -46,4 +46,4 @@ const LayoutHome = () => (
   </Container>
 )
 
-export default LayoutHome
+export default LayoutHome;
