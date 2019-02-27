@@ -5,29 +5,15 @@ import Section from './Section';
 import Footer from './Footer';
 
 // STYLES
-import { Container, Info, SubInfo } from './styles';
+import { Container, } from './styles';
 
 // CONSTANTS
 import { SECTIONS } from 'constants/sections'
 import { INFO_SECTIONS } from 'constants/infoSections'
 
-const setInfos = (info, components) => {
-  return (
-    <Info>
-      {components[0](info.secondaryInfo.title, info.secondaryInfo.description)}
-      <SubInfo>
-        {
-          components.map((item, index) => {
-            if (index !== 0) {
-              const newInfo = info[`tertiaryInfo-${index}`]
-              return item(index, newInfo.image, newInfo.title, newInfo.altImage, newInfo.description)
-            }
-          })
-        }
-      </SubInfo>
-    </Info>
-  )
-}
+// UTILS
+import { setInfos } from './utils';
+
 
 const LayoutHome = () => (
   <Container>
@@ -44,7 +30,7 @@ const LayoutHome = () => (
             />
           )
         }
-        return section.component()
+        return section.component(section.id)
       })
     }
     <Footer />

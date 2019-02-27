@@ -82,7 +82,7 @@ export const SECTIONS = [
   },
   {
     id: 6,
-    component: () => <GridTeam team={TEAM}/>
+    component: key => <GridTeam key={key} team={TEAM}/>
   },
   {
     id: 10,
