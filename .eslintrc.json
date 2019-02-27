@@ -33,6 +33,7 @@
     "indent": [
       "error",
       2
-    ]
+    ],
+    "react/display-name": 0
   }
 }

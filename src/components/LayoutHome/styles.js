@@ -8,3 +8,11 @@ export const Container = styled.div`
 export const WordsColor = styled.span`
    color:  ${ ({ color, theme: { colors } }) => colors[color]}
 `
+
+export const Info = styled.div`
+   display: flex;
+`
+
+export const SubInfo = styled.div`
+   display: flex;
+`
