@@ -4,12 +4,13 @@ import { array, string, oneOfType, object } from 'prop-types';
 // STYLES
 import { Description } from './styles'
 
-const DescriptionComponent = ({ size, children, margin, direction, width }) =>
-  <Description
+const DescriptionComponent = ({ size, children, margin, direction, color, bold }) =>
+  <Description 
     margin={margin}
     size={size}
     direction={direction}
-    width={width}>{children}</Description>
+    color={color}
+    bold={bold}>{children}</Description>
 
 DescriptionComponent.defaultProps = {
   margin: '0px',
@@ -22,7 +23,8 @@ DescriptionComponent.propTypes = {
   size: string,
   margin: string,
   direction: string,
-  width: string
+  color: string,
+  bold: string
 }
 
 export default DescriptionComponent

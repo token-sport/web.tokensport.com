@@ -6,7 +6,8 @@ export default {
     neonOrange: "#FCB900",
     neonGreen: "#00FC86",
     opaqueBlue: "#53698A",
-    gray: '#D1D1D1'
+    gray: '#D1D1D1',
+    white: '#FFFFFF'
   },
   size: {
     width: {
