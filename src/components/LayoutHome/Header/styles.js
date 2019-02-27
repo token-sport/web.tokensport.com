@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export default styled.header`
-  width: 100%;
+  width: calc( 100% - 200px);
   height: 70px;
   position: fixed;
   top: 0%;
   left: 0%;
   display: grid;
   grid-template-columns: 80px 4fr 2fr;
+  padding: 0 100px;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background}
 `

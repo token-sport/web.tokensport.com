@@ -11,4 +11,4 @@ const Container = ({ src, name }) => (
 );
 
 storiesOf('LangItem', module)
-  .add('default', () => <Container src='https://images.unsplash.com/photo-1494419470281-65c2b001a42b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=931&q=80' name='EN'/>);
+  .add('default', () => <Container src='https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/circleFlags%2FEnglish-flag%402x.png?alt=media&token=5da5afc1-967b-46fd-b83e-4c4b6f286560' name='EN'/>);

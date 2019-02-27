@@ -10,4 +10,4 @@ const Container = () => (
   </div>
 );
 
-storiesOf('Footer', module).add('default', () => <Container />);
+storiesOf('Home', module).add('Footer', () => <Container />);
