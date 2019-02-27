@@ -6,6 +6,7 @@ export default {
     neonOrange: "#FCB900",
     neonGreen: "#00FC86",
     opaqueBlue: "#53698A",
+    darkBlue: "#0E1726",
     gray: '#D1D1D1',
     white: '#FFFFFF'
   },
