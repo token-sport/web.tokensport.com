@@ -14,7 +14,8 @@ const DescriptionComponent = ({ size, children, margin, direction, color, bold }
 
 DescriptionComponent.defaultProps = {
   margin: '0px',
-  direction: 'unset'
+  direction: 'unset',
+  width: 'auto'
 }
 
 DescriptionComponent.propTypes = {

@@ -18,6 +18,12 @@
          "theme/*": [
             "./src/theme/*"
          ],
+         "constants/*": [
+            "./src/constants/*"
+         ],
+         "fixture/*": [
+            "./src/fixture/*"
+         ]
       }
    }
 }

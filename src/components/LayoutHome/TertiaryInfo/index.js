@@ -11,8 +11,8 @@ import { Container } from './styles';
 
 import logo from 'assets/logo.png'
 
-const TertiaryInfo = ({ image, altImage, title, description }) => (
-  <Container>
+const TertiaryInfo = ({ image, altImage, title, description, width }) => (
+  <Container width={width}>
     <Image src={image} alt={altImage} width="60" height="60" />
     <Title size="sm" bold="600" margin="10px 0 0 0">{title}</Title>
     <Description size="xsm" margin="5px 0 0 0">{description}</Description>
@@ -20,14 +20,16 @@ const TertiaryInfo = ({ image, altImage, title, description }) => (
 )
 
 TertiaryInfo.defaultProps = {
-  image: logo
+  image: logo,
+  width: 'auto'
 }
 
 TertiaryInfo.propTypes = {
   image: string,
   altImage: string,
   title: object,
-  description: object
+  description: object,
+  width: string
 }
 
 export default TertiaryInfo

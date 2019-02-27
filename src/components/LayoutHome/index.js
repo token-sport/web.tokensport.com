@@ -1,19 +1,51 @@
 import React from 'react'
 
 // COMPONENTS
-import Header from './Header';
-import SecondaryInfo from './SecondaryInfo';
+import Section from './Section';
 
 // STYLES
-import { Container, WordsColor } from './styles';
+import { Container, Info, SubInfo } from './styles';
+
+// CONSTANTS
+import { SECTIONS } from 'constants/sections'
+import { INFO_SECTIONS } from 'constants/infoSections'
+
+const setInfos = (info, components) => {
+  return (
+    <Info>
+      {components[0](info.secondaryInfo.title, info.secondaryInfo.description)}
+      <SubInfo>
+        {
+          components.map((item, index) => {
+            if (index !== 0) {
+              const newInfo = info[`tertiaryInfo-${index}`]
+              return item(index, newInfo.image, newInfo.title, newInfo.altImage, newInfo.description)
+            }
+          })
+        }
+      </SubInfo>
+    </Info>
+  )
+}
 
 const LayoutHome = () => (
   <Container>
-    <Header />
-    <SecondaryInfo
-      title={<span>¿Qué rayos es <WordsColor color="neonBlue">Token Sport?</WordsColor></span>}
-      description={<span>Es la primer Dapp (aplicación descentralizada) que permite a los usuarios compartir sus emociones en los deportes y por medio de tecnología BlockChain, tokenizar sus datos.</span>}
-    />
+    {
+      SECTIONS.map((section, index) => {
+        if (section.isMainInfo !== undefined) {
+          const infoSection = INFO_SECTIONS[section.info]
+          return (
+            <Section
+              key={section.id}
+              isReverse={section.isReverse}
+              image={index === 0 ? section.image : infoSection.image}
+              info={index === 0 ? section.components[0]() : setInfos(infoSection, section.components)}
+            />
+          )
+        }
+        return section.component()
+      })
+    }
   </Container>
 )
 
