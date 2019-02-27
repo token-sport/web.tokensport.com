@@ -1,5 +1,5 @@
 import React from 'react'
-import { array, string } from 'prop-types'
+import { string } from 'prop-types'
 import { Link } from 'react-router-dom'
 
 // STYLES
@@ -17,7 +17,7 @@ LinkComponent.defaultProps = {
 }
 
 LinkComponent.propTypes = {
-  children: array,
+  children: string,
   path: string
 }
 
