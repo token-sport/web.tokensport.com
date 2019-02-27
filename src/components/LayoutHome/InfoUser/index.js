@@ -17,9 +17,7 @@ const InfoUser = ({ image, name, profession, country, shadow, networks }) => (
     <Text margin="20px 0 0" size="xmd" bold="600">{name}</Text>
     <Text size="xsm">{profession}</Text>
     <Country>{country}</Country>
-    <div className="networks">
-      <Networks networks={networks} width="17px" height="17px" />
-    </div>
+    <Networks networks={networks} width="17px" height="17px" margin="60px 0 0 0" />
   </Container>
 )
 
