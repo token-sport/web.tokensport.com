@@ -2,6 +2,7 @@ import React from 'react'
 
 // COMPONENTS
 import Section from './Section';
+import Footer from './Footer';
 
 // STYLES
 import { Container, Info, SubInfo } from './styles';
@@ -32,17 +33,21 @@ const LayoutHome = () => (
   <Container>
     {
       SECTIONS.map((section, index) => {
-        const infoSection = INFO_SECTIONS[section.info]
-        return (
-          <Section
-            key={section.id}
-            isReverse={section.isReverse}
-            image={index === 0 ? section.image : infoSection.image}
-            info={index === 0 ? section.components[0]() : setInfos(infoSection, section.components)}
-          />
-        )
+        if (section.isMainInfo !== undefined) {
+          const infoSection = INFO_SECTIONS[section.info]
+          return (
+            <Section
+              key={section.id}
+              isReverse={section.isReverse}
+              image={index === 0 ? section.image : infoSection.image}
+              info={index === 0 ? section.components[0]() : setInfos(infoSection, section.components)}
+            />
+          )
+        }
+        return section.component()
       })
     }
+    <Footer />
   </Container>
 )
 

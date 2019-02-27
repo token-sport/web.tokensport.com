@@ -4,12 +4,13 @@ import React from 'react';
 import Links from 'components/shared/Links';
 import Image from 'components/shared/Image';
 import Description from 'components/shared/Description';
+import Network from 'components/shared/Network';
 
 // STYLES
 import FooterContainer from './styles';
 
 // FIXTURES
-import { links } from 'fixture/';
+import { links, TSPNETWORKS } from 'fixture/';
 
 // ASSETS
 import logo from 'assets/logo.png';
@@ -35,6 +36,7 @@ const Footer = () => <FooterContainer>
       color="white"
       bold="300"
     >Siguenos para estar al tanto de todo</Description>
+    <Network networks={TSPNETWORKS} width="20px" height="20px" margin="20px 0 0 0"/>
   </div>
 </FooterContainer>
 
