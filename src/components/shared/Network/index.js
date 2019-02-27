@@ -7,7 +7,7 @@ import Icon from 'components/shared/Icon';
 // STYLES
 import NetworkContainer from './styles';
 
-const Network = ({ networks, width, height }) => <NetworkContainer>
+const Network = ({ networks, width, height, margin }) => <NetworkContainer margin={margin}>
   {
     networks.map((network, index) =>
       <Icon
@@ -23,7 +23,8 @@ const Network = ({ networks, width, height }) => <NetworkContainer>
 Network.propTypes = {
   networks: array,
   width: string,
-  height: string
+  height: string,
+  margin: string
 }
 
 export default Network;

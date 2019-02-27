@@ -8,7 +8,7 @@ import Image from 'components/shared/Image';
 import IconContainer from './styles';
 
 const Icon = ({ network, name, width, height, link }) => <IconContainer href={link} target="_blank">
-  <Image src={network} width={width} height={height} alt={name}/>
+  <Image src={network} width={width} height={height} alt={name} isIcon/>
 </IconContainer>
 
 Icon.propTypes = {
