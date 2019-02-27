@@ -7,6 +7,7 @@ import SecondaryInfo from 'components/LayoutHome/SecondaryInfo';
 import TertiaryInfo from 'components/LayoutHome/TertiaryInfo';
 import GridTeam from 'components/LayoutHome/GridTeam';
 
+
 // IMAGES
 import logo from 'assets/logo.png'
 
