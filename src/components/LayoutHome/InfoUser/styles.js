@@ -5,6 +5,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: fit-content;
+  .networks {
+    margin-top: 60px;
+  }
 `
 
 export const CircleImage = styled.div`

@@ -25,6 +25,7 @@ const GridTeam = ({ team }) => (
               name={item.name}
               profession={item.profession}
               country={item.country}
+              networks={item.networks}
               shadow={item.color}
             />
           </Card>
