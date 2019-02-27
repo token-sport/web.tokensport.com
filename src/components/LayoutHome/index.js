@@ -2,6 +2,7 @@ import React from 'react'
 
 // COMPONENTS
 import Section from './Section';
+import Footer from './Footer';
 
 // STYLES
 import { Container, } from './styles';
@@ -32,6 +33,7 @@ const LayoutHome = () => (
         return section.component(section.id)
       })
     }
+    <Footer />
   </Container>
 )
 
