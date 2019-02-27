@@ -5,9 +5,13 @@ import Image from 'components/shared/Image';
 import MainInfo from 'components/LayoutHome/MainInfo';
 import SecondaryInfo from 'components/LayoutHome/SecondaryInfo';
 import TertiaryInfo from 'components/LayoutHome/TertiaryInfo';
+import GridTeam from 'components/LayoutHome/GridTeam';
 
 // IMAGES
 import logo from 'assets/logo.png'
+
+// CONTANTS
+import { team as TEAM } from 'fixture/'
 
 export const SECTIONS = [
   {
@@ -74,6 +78,10 @@ export const SECTIONS = [
     image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: true,
     info: 'sectionSix'
+  },
+  {
+    id: 6,
+    component: () => <GridTeam team={TEAM}/>
   },
   {
     id: 10,
