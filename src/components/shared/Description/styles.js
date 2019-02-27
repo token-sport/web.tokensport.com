@@ -8,4 +8,5 @@ export const Description = styled.div`
    margin: ${({ margin }) => margin};
    display: flex;
    flex-direction: ${({ direction }) => direction};
+   width: ${({ width }) => width};
 `

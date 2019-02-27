@@ -11,7 +11,6 @@ import { SECTIONS } from 'constants/sections'
 import { INFO_SECTIONS } from 'constants/infoSections'
 
 const setInfos = (info, components) => {
-  console.log(components)
   return (
     <Info>
       {components[0](info.secondaryInfo.title, info.secondaryInfo.description)}
@@ -19,10 +18,9 @@ const setInfos = (info, components) => {
         {
           components.map((item, index) => {
             if (index !== 0) {
-              const info = info[`tertiaryInfo-${index}`]
-              item(index, info.image, info.title, info.altImage, info.description)
+              const newInfo = info[`tertiaryInfo-${index}`]
+              return item(index, newInfo.image, newInfo.title, newInfo.altImage, newInfo.description)
             }
-            return <div key={index} />
           })
         }
       </SubInfo>

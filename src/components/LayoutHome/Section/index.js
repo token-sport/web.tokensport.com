@@ -2,12 +2,16 @@ import React from 'react';
 import { element, bool } from 'prop-types'
 
 // STYLES
-import { Container } from './styles'
+import { Container, ImageSection, InfoSection } from './styles'
 
 const Section = ({ image, info, isReverse }) => (
   <Container isReverse={isReverse}>
-    {image}
-    {info}
+    <ImageSection>
+      {image}
+    </ImageSection>
+    <InfoSection>
+      {info}
+    </InfoSection>
   </Container>
 )
 

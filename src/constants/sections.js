@@ -22,8 +22,7 @@ export const SECTIONS = [
     isMainInfo: false,
     components: [
       (title, description) => <SecondaryInfo title={title} description={description} />,
-      (logo, title, altImage, description) => <TertiaryInfo image={logo} altImage={altImage} title={title} description={description} />,
-      (logo, title, altImage, description) => <TertiaryInfo image={logo} altImage={altImage} title={title} description={description} />,
+      (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
     image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: true,
@@ -33,12 +32,59 @@ export const SECTIONS = [
     id: 2,
     isMainInfo: false,
     components: [
-      (title, description) => <SecondaryInfo title={title} description={description} />,
+      (title, description) => <SecondaryInfo title={title} description={description} widthDescription="85%" />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
     image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: false,
-    info: 'sectionTree'
+    info: 'sectionThree'
+  },
+  {
+    id: 3,
+    isMainInfo: false,
+    components: [
+      (title, description) => <SecondaryInfo title={title} description={description} widthDescription="85%" />,
+      (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
+    ],
+    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    isReverse: true,
+    info: 'sectionFour'
+  },
+  {
+    id: 4,
+    isMainInfo: false,
+    components: [
+      (title, description) => <SecondaryInfo title={title} description={description} widthDescription="85%" />,
+      (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
+      (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
+    ],
+    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    isReverse: false,
+    info: 'sectionFive'
+  },
+  {
+    id: 5,
+    isMainInfo: false,
+    components: [
+      (title, description) => <SecondaryInfo title={title} description={description} widthDescription="90%" />,
+      (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
+      (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
+    ],
+    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    isReverse: true,
+    info: 'sectionSix'
+  },
+  {
+    id: 10,
+    isMainInfo: false,
+    components: [
+      (title, description) => <SecondaryInfo title={title} description={description} widthDescription="90%" />,
+      (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
+      (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
+    ],
+    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    isReverse: true,
+    info: 'sectionEleven'
   },
 ]
