@@ -5,5 +5,5 @@ export const Image = styled.img.attrs(({ src }) => ({
 }))`
   width: ${({ width }) => width};
   height: ${({ height }) => height};
-  object-fit: ${({ isIcon }) => isIcon ? 'icon' : 'cover'};
+  object-fit: ${({ isIcon }) => isIcon ? 'contain' : 'cover'};
 `
