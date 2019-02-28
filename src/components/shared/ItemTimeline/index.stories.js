@@ -11,5 +11,5 @@ const Container = ({ color, isSelected }) => (
 )
 
 storiesOf('ItemTimeline', module)
-  .add('unselected', () => <Container color="neonOrange" />)
+  .add('unselected', () => <Container color="neonBlue" />)
   .add('selected', () => <Container color="neonBlue" isSelected/>)
