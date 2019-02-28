@@ -3,11 +3,9 @@ import { WordsColor } from 'components/LayoutHome/styles'
 
 import logo from 'assets/logo.png'
 
-import Image from 'components/shared/Image'
-
 export const INFO_SECTIONS = {
   sectionTwo: {
-    image: <Image src={logo} alt="logo" height="580" width="580" />,
+    image: logo,
     secondaryInfo: {
       title: <span>¿Qué rayos es <WordsColor color="neonBlue" >Token Sport?</WordsColor> </span>,
       description: <span>Es la primer Dapp (aplicación descentralizada) que permite a los usuarios compartir sus emociones en los deportes y por medio de tecnología BlockChain, tokenizar sus datos.</span>
@@ -19,8 +17,9 @@ export const INFO_SECTIONS = {
       description: <span>A diferencia de las redes sociales, nosotros sabemos lo mucho que vale tu interacción en internet y por eso te devolvemos con creces todas las emociones que compartes con nosotros. ¡Todo porque te lo mereces!</span>
     }
   },
+
   sectionThree: {
-    image: <Image src={logo} alt="logo" height="580" width="580" />,
+    image: logo,
     secondaryInfo: {
       title: <> <span>Comparte</span> <span>tus <WordsColor color="neonOrange">emociones</WordsColor></span> </>,
       description: <span>Elige el partido de fútbol en el que quieras interactuar con la comunidad. Aplaude y/o Abuchea a los Jugadores, Técnicos y Jueces de cada partido.</span>
@@ -38,8 +37,9 @@ export const INFO_SECTIONS = {
       description: <span>Selecciona los 11 jugadores que crees serán más abucheados o aplaudidos durante los 30 días siguientes. Si tu once resulta ser el más acertado recibirás TSP como premio.</span>
     }
   },
+
   sectionFour: {
-    image: <Image src={logo} alt="logo" height="580" width="580" />,
+    image: logo,
     secondaryInfo: {
       title: <span>Salimos en <WordsColor color="neonGreen">TV</WordsColor> </span>,
       description: <span>Los Medios de Comunicación realizan un pago en cada partido y reciben la transmisión en Vivo de como la comunidad Aplaude y Abuchea durante cada partido.</span>
@@ -51,8 +51,9 @@ export const INFO_SECTIONS = {
       description: <span>Una vez los Medios realicen el pago, podrán obtener mediante una API las estadísticas de la sensación que tienen los hinchas durante el partido.</span>
     }
   },
+
   sectionFive: {
-    image: <Image src={logo} alt="logo" height="580" width="580" />,
+    image: logo,
     secondaryInfo: {
       title: <WordsColor color="neonBlue">Tokenizamos</WordsColor>,
       description: <span>Por medio de Contratos Inteligentes los Usuarios reciben TSP, que podrán ser intercambiados por Bitcoin, o consumir directamente en Tiendas y Comercios Aliados.</span>
@@ -70,8 +71,9 @@ export const INFO_SECTIONS = {
       description: <span>Gracias a los Contratos Inteligentes podemos generar una estructura consistente en la cual las recompensas son obtenidas al completar determinadas tareas. Ganar es tan fácil como: Comprar, Interactuar y Aportar.</span>
     }
   },
+
   sectionSix: {
-    image: <Image src={logo} alt="logo" height="580" width="580" />,
+    image: logo,
     secondaryInfo: {
       title: <> <span>Sé parte</span> <span>de la <WordsColor color="neonOrange">comunidad</WordsColor></span> </>,
       description: <span>Edita, corrige y actualiza los datos de las ligas para mantener al día la información de los equipos. Por cada acción validada recibirás grandes recompensas.</span>
@@ -89,8 +91,9 @@ export const INFO_SECTIONS = {
       description: <span>Al ser parte de nuestra comunidad tendrás el beneficio de probar y ayudar a mejorar el ecosistema de Token Sport, además recibirás grandiosas recompensas por contribuir a que Token Sport sea cada vez mejor.</span>
     }
   },
+
   sectionEleven: {
-    image: <Image src={logo} alt="logo" height="580" width="580" />,
+    image: logo,
     secondaryInfo: {
       title: <span>¡Suscríbete y sé parte de este<WordsColor color="neonGreen"> Gran Equipo!</WordsColor></span>,
       description: <span>Tendrás acceso anticipado, pruebas gratis y toda la información del proyecto.</span>

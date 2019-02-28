@@ -10,5 +10,6 @@ export default styled.header`
   grid-template-columns: 80px 4fr 2fr;
   padding: 0 100px;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.background}
+  background-color: ${({ theme }) => theme.colors.background};
+  z-index: 99;
 `

@@ -21,14 +21,14 @@ const LayoutHome = () => (
     <Header />
     {
       SECTIONS.map((section, index) => {
-        if (section.isMainInfo !== undefined) {
+        if (section.componentSide) {
           const infoSection = INFO_SECTIONS[section.info]
           return (
             <Section
               key={section.id}
               isReverse={section.isReverse}
-              image={index === 0 ? section.image : infoSection.image}
-              info={index === 0 ? section.components[0]() : setInfos(infoSection, section.components)}
+              componentSide={section.componentSide(index !== 0 ? infoSection.image : '')}
+              info={index === 0 ? section.components[0]() : setInfos(infoSection, section.components, section.isReverse)}
             />
           )
         }

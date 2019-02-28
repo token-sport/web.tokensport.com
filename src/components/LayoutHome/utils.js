@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Info, SubInfo } from './styles'
 
-export const setInfos = (info, components) => (
-  <Info>
+export const setInfos = (info, components, isReverse) => (
+  <Info isReverse={isReverse}>
     {components[0](info.secondaryInfo.title, info.secondaryInfo.description)}
     <SubInfo>
       {
