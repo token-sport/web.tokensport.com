@@ -45,6 +45,58 @@ export const TSPNETWORKS = [
   }
 ]
 
+export const ROADMAP = [
+  {
+    id: 1,
+    date: 'Enero 2014',
+    title: 'Nace la idea',
+    description: 'A puertas del Mundial Brasil 2014, surge la idea de crear una aplicación que permita a los hinchas interactuar en los partidos de dicho evento sin importar las distancias. Creando así interacciones en Vivo donde los usuarios pueden expresarse.',
+    color: 'neonBlue'
+  },
+  {
+    id: 2,
+    date: 'Abril 2014',
+    title: 'Prueba de concepto 0.1',
+    description: 'Luego de meses de desarrollo, nace "Puteame o Aplaudime" una WebApp que permitía a amigos interactuar en una red privada y compartir sus Emociones, Apostar con Tokens y elegir los 11 jugadores más puteados y/o más aplaudidos de todo el torneo. (Activada y Utilizada en Bogotá y Buenos Aires).',
+    color: 'neonOrange'
+  },
+  {
+    id: 3,
+    date: 'Enero 2015',
+    title: 'Investigación',
+    description: 'Conociendo la tecnología BlockChain, se investiga sobre la tecnología BlockChain y se crean las primeras líneas para darle forma y perfeccionar el sistema de Gamification, con el fin de incorporar esta tecnología.',
+    color: 'neonGreen'
+  },
+  {
+    id: 4,
+    date: 'Junio 2018',
+    title: 'Alianzas Estratégicas',
+    description: 'Influenciando y Compartiendo la investigación realizada sobre la tecnología BlockChain, se crean lazos con Token Partner, cámara de comercio BlockChain.',
+    color: 'opaqueBlue'
+  },
+  {
+    id: 5,
+    date: 'Septiembre 2018',
+    title: 'Creación de Tokens',
+    description: 'Se crea la primer tanda de Tokens (9.090.000) en la blockchain de NEM (acceso únicamente del fundador), que serán distribuídos al finalizar la Fase 1.',
+    color: 'neonBlue'
+  },
+  {
+    id: 6,
+    date: 'Noviembre 2018',
+    title: 'Equipo disruptivo',
+    description: 'Creación de Programa de Trabajo Colaborativo-Disruptivo que permite a los actores activos ser parte de la primer Airdrop por trabajo.',
+    color: 'neonOrange'
+  },
+  {
+    id: 7,
+    date: 'Diciembre 2018',
+    title: 'Información abierta al público',
+    description: 'Se lanza el LitePaper con un resúmen de la Token Sport con el objetivo de dar a conocer el proyecto y recibir propuestas de participación en el Equipo Disruptivo.',
+    color: 'neonGreen'
+  }
+]
+
 export const TOKENDIST = [
   {
     description: 'Equipo inicial',
