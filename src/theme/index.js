@@ -35,6 +35,7 @@ export default {
   },
   shadows: {
     dark: "0px 3px 15px rgba(0, 0, 0, .2)",
+    opaqueBlue: "0px 3px 15px rgba(83, 105, 138, 1)",
     blue: "0px 0px 10px rgba(57, 176, 227, .6)",
     neonBlue: "0px 3px 15px rgba(0, 229, 255, 0.3)",
     neonGreen: "0px 3px 15px rgba(0, 252, 134, .3)",

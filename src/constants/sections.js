@@ -9,6 +9,7 @@ import GridTeam from 'components/LayoutHome/GridTeam';
 import TokenDist from 'components/LayoutHome/TokenDist';
 import Card from 'components/shared/Cards'
 import Form from 'components/LayoutHome/Form'
+import Carousel from 'components/LayoutHome/Carousel'
 
 // IMAGES
 import logo from 'assets/logo.png'
@@ -78,10 +79,14 @@ export const SECTIONS = [
   },
   {
     id: 6,
-    component: key => <TokenDist key={key} />
+    component: key => <Carousel key={key} />
   },
   {
     id: 7,
+    component: key => <TokenDist key={key} />
+  },
+  {
+    id: 8,
     component: key => <GridTeam key={key} team={TEAM} />
   },
   {
