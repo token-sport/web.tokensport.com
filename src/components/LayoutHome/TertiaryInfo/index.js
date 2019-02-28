@@ -13,7 +13,7 @@ import logo from 'assets/logo.png'
 
 const TertiaryInfo = ({ image, altImage, title, description, width }) => (
   <Container width={width}>
-    <Image src={image} alt={altImage} width="60" height="60" />
+    <Image src={image} alt={altImage} width="60px" height="60px" />
     <Title size="sm" bold="600" margin="10px 0 0 0">{title}</Title>
     <Description size="xsm" margin="5px 0 0 0">{description}</Description>
   </Container>

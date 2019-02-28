@@ -244,32 +244,32 @@ export const team = [
       }
     ]
   },
-  // {
-  //   name: 'Fabian Delgado',
-  //   profession: 'Media Partner',
-  //   photo: 'https://tokensport.co/wp-content/uploads/2018/12/foto.png',
-  //   country: 'Colombia',
-  //   color: 'neonBlue',
-  //   networks: [
-  //     {
-  //       name: 'linkedin',
-  //       icon: ICONS['linkedin'],
-  //       link: 'https://www.linkedin.com/in/fabian-delgado-621935164/'
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Santiago Guzmán',
-  //   profession: 'Media Partner',
-  //   photo: 'https://tokensport.co/wp-content/uploads/2018/12/Diseño-sin-título.png',
-  //   country: 'Colombia',
-  //   color: 'neonBlue',
-  //   networks: [
-  //     {
-  //       name: 'linkedin',
-  //       icon: ICONS['linkedin'],
-  //       link: 'https://www.linkedin.com/in/santiago-guzman-5abb85b6/'
-  //     }
-  //   ]
-  // },
+  {
+    name: 'Fabian Delgado',
+    profession: 'Media Partner',
+    photo: 'https://tokensport.co/wp-content/uploads/2018/12/foto.png',
+    country: 'Colombia',
+    color: 'neonBlue',
+    networks: [
+      {
+        name: 'linkedin',
+        icon: ICONS['linkedin'],
+        link: 'https://www.linkedin.com/in/fabian-delgado-621935164/'
+      }
+    ]
+  },
+  {
+    name: 'Santiago Guzmán',
+    profession: 'Media Partner',
+    photo: 'https://tokensport.co/wp-content/uploads/2018/12/Diseño-sin-título.png',
+    country: 'Colombia',
+    color: 'neonBlue',
+    networks: [
+      {
+        name: 'linkedin',
+        icon: ICONS['linkedin'],
+        link: 'https://www.linkedin.com/in/santiago-guzman-5abb85b6/'
+      }
+    ]
+  },
 ]
