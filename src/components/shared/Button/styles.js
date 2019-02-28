@@ -29,4 +29,5 @@ export const Button = styled.button`
     width: ${({ small }) => small ? '100px' : '120px'};
     height: 40px;
   }
+  
 `
