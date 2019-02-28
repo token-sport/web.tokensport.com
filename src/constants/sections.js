@@ -11,8 +11,6 @@ import Card from 'components/shared/Cards'
 import Form from 'components/LayoutHome/Form'
 import Carousel from 'components/LayoutHome/Carousel'
 
-// IMAGES
-import logo from 'assets/logo.png'
 
 // CONTANTS
 import { team as TEAM } from 'fixture/'
@@ -21,7 +19,7 @@ export const SECTIONS = [
   {
     id: 0,
     components: [() => <MainInfo />],
-    componentSide: () => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: () => <Image src="" alt="logo" height="580px" width="580px" isIcon/>,
     isReverse: false
   },
   {
@@ -30,7 +28,7 @@ export const SECTIONS = [
       (title, description) => <SecondaryInfo title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="Que rayos es token sport" height="500px" width="500px" isIcon/>,
     isReverse: true,
     info: 'sectionTwo'
   },
@@ -41,7 +39,7 @@ export const SECTIONS = [
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="Comparte tus emociones" height="580px" width="580px" isIcon/>,
     isReverse: false,
     info: 'sectionThree'
   },
@@ -51,7 +49,7 @@ export const SECTIONS = [
       (title, description) => <SecondaryInfo title={title} description={description} widthDescription="85%" />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="Salimos en tv" height="580px" width="580px" isIcon />,
     isReverse: true,
     info: 'sectionFour'
   },
@@ -62,7 +60,7 @@ export const SECTIONS = [
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="Tokenizamos" height="550px" width="550px" isIcon/>,
     isReverse: false,
     info: 'sectionFive'
   },
@@ -73,7 +71,7 @@ export const SECTIONS = [
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="Comunidad" height="580px" width="580px" isIcon />,
     isReverse: true,
     info: 'sectionSix'
   },
