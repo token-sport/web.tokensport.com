@@ -2,13 +2,13 @@ import React from 'react';
 import { element, bool } from 'prop-types'
 
 // STYLES
-import { Container, ImageSection, InfoSection } from './styles'
+import { Container, SideSection, InfoSection } from './styles'
 
-const Section = ({ image, info, isReverse }) => (
+const Section = ({ componentSide, info, isReverse }) => (
   <Container isReverse={isReverse}>
-    <ImageSection>
-      {image}
-    </ImageSection>
+    <SideSection>
+      {componentSide}
+    </SideSection>
     <InfoSection>
       {info}
     </InfoSection>
@@ -16,7 +16,7 @@ const Section = ({ image, info, isReverse }) => (
 )
 
 Section.propTypes = {
-  image: element,
+  componentSide: element,
   info: element,
   isReverse: bool
 }

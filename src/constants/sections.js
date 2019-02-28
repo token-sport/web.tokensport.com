@@ -6,7 +6,9 @@ import MainInfo from 'components/LayoutHome/MainInfo';
 import SecondaryInfo from 'components/LayoutHome/SecondaryInfo';
 import TertiaryInfo from 'components/LayoutHome/TertiaryInfo';
 import GridTeam from 'components/LayoutHome/GridTeam';
-
+import TokenDist from 'components/LayoutHome/TokenDist';
+import Card from 'components/shared/Cards'
+import Form from 'components/LayoutHome/Form'
 
 // IMAGES
 import logo from 'assets/logo.png'
@@ -17,82 +19,81 @@ import { team as TEAM } from 'fixture/'
 export const SECTIONS = [
   {
     id: 0,
-    isMainInfo: true,
     components: [() => <MainInfo />],
-    image: <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: () => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: false
   },
   {
     id: 1,
-    isMainInfo: false,
     components: [
       (title, description) => <SecondaryInfo title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: true,
     info: 'sectionTwo'
   },
   {
     id: 2,
-    isMainInfo: false,
     components: [
       (title, description) => <SecondaryInfo title={title} description={description} widthDescription="85%" />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: false,
     info: 'sectionThree'
   },
   {
     id: 3,
-    isMainInfo: false,
     components: [
       (title, description) => <SecondaryInfo title={title} description={description} widthDescription="85%" />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: true,
     info: 'sectionFour'
   },
   {
     id: 4,
-    isMainInfo: false,
     components: [
       (title, description) => <SecondaryInfo title={title} description={description} widthDescription="85%" />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: false,
     info: 'sectionFive'
   },
   {
     id: 5,
-    isMainInfo: false,
     components: [
       (title, description) => <SecondaryInfo title={title} description={description} widthDescription="90%" />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: logo => <Image src={logo} alt="logo" height="580" width="580" />,
     isReverse: true,
     info: 'sectionSix'
   },
   {
     id: 6,
-    component: key => <GridTeam key={key} team={TEAM}/>
+    component: key => <TokenDist key={key} />
+  },
+  {
+    id: 7,
+    component: key => <GridTeam key={key} team={TEAM} />
   },
   {
     id: 10,
-    isMainInfo: false,
     components: [
       (title, description) => <SecondaryInfo title={title} description={description} widthDescription="90%" />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    image: logo => <Image src={logo} alt="logo" height="580" width="580" />,
+    componentSide: () => (<Card padding="50px" withGradient={true} showInHover={false}>
+      <Form />
+    </Card>),
     isReverse: true,
     info: 'sectionEleven'
   },

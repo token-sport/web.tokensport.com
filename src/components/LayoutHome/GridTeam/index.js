@@ -13,7 +13,7 @@ import Description from 'components/shared/Description';
 const GridTeam = ({ team }) => (
   <Container>
     <Title size="xlg" bold="800">Dream Team</Title>
-    <Description size="xmd" color="white">
+    <Description size="xmd" color="white" margin="10px 0">
       <SubTitle>Descubre el equipo titular de Token Sport</SubTitle>
     </Description>
     <Grid>

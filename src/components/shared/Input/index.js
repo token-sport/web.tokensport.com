@@ -16,11 +16,11 @@ InputComponent.defaultProps = {
 }
 
 InputComponent.propTypes = {
-  label: string.isRequired,
-  type: string.isRequired,
-  name: string.isRequired,
-  value: string.isRequired,
-  onChange: func.isRequired,
+  label: string,
+  type: string,
+  name: string,
+  value: string,
+  onChange: func,
   width: string
 }
 
