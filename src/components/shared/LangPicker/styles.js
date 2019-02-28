@@ -14,4 +14,7 @@ export default styled.div`
     margin: 6px 0 0 0;
     cursor: pointer;
   }
+  @media (max-width: 576.98px) {
+    margin-right: 0px;
+  }
 `

@@ -23,4 +23,10 @@ export const Button = styled.button`
   :focus {
     outline: none;
   }
+
+
+  @media (max-width: 576.98px) {
+    width: ${({ small }) => small ? '100px' : '120px'};
+    height: 40px;
+  }
 `
