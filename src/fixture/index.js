@@ -45,6 +45,29 @@ export const TSPNETWORKS = [
   }
 ]
 
+export const TOKENDIST = [
+  {
+    description: 'Equipo inicial',
+    percent: '1.13%',
+    color: 'neonBlue'
+  },
+  {
+    description: 'Drop Inicial',
+    percent: '2.5%',
+    color: 'neonOrange'
+  },
+  {
+    description: 'Inversión Temprana',
+    percent: '15.18%',
+    color: 'neonGreen'
+  },
+  {
+    description: 'ICO',
+    percent: '10%',
+    color: 'opaqueBlue'
+  }
+]
+
 export const team = [
   {
     name: 'Alejandro Fernandez',
