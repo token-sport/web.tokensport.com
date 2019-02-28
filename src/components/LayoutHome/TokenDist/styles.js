@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TokenDistSection = styled.section`
-  width: calc(100% - 100px);
+  width: calc(100% - 200px);
   padding: 0 100px;
   display: flex;
   flex-direction: column;
