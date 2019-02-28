@@ -48,5 +48,5 @@ export default {
   }, 
   family: {
     nunito: 'Nunito'
-  }
+  },
 };

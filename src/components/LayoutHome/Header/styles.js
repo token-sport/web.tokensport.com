@@ -12,4 +12,13 @@ export default styled.header`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background};
   z-index: 99;
+
+  @media (max-width: 576.98px) {
+    width: calc( 100% - 60px);    
+    padding: 0 30px;
+    grid-template-columns: 80px 4fr;
+    > div:last-child {
+      display: none;
+    }
+  }
 `
