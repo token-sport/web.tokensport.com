@@ -12,12 +12,12 @@ import HeaderContainer from './styles';
 import logo from 'assets/logo.png';
 
 // FIXTURES
-import { languages, links } from 'fixture/'
+import { LANGUAGES, LINKS } from 'fixture/';
 
 const Header = () => <HeaderContainer>
-  <Image src={logo} alt="logo" width="60px" height="60px"/>
-  <LangPicker langs={languages}/>
-  <Links arrLink={links}/>
-</HeaderContainer>
+  <Image src={logo} alt="logo" width="50px" height="50px"/>
+  <LangPicker langs={LANGUAGES}/>
+  <Links arrLink={LINKS}/>
+</HeaderContainer>;
 
 export default Header;

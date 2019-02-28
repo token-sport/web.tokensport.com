@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  justify-self: end;
   display: flex;
   flex-direction: ${({ isColumn  }) => isColumn ? 'column' : 'row'};
+  justify-self: end;
+  align-items: ${({ isColumn }) => isColumn ? 'none': 'center'};
 
   > a:last-child {
     margin: 0;

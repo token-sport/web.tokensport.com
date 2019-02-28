@@ -10,13 +10,13 @@ import Network from 'components/shared/Network';
 import FooterContainer from './styles';
 
 // FIXTURES
-import { links, TSPNETWORKS } from 'fixture/';
+import { LINKS, TSPNETWORKS } from 'fixture/';
 
 // ASSETS
 import logo from 'assets/logo.png';
 
 const Footer = () => <FooterContainer>
-  <Links arrLink={links} isColumn/>
+  <Links arrLink={LINKS} isColumn/>
   <div>
     <Image src={logo} alt="logo" width="100px" height="100px"/>
     <Description

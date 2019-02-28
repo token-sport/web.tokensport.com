@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 // COMPONENTS
+import Header from './Header';
 import Section from './Section';
 import Footer from './Footer';
 
@@ -8,8 +9,8 @@ import Footer from './Footer';
 import { Container, } from './styles';
 
 // CONSTANTS
-import { SECTIONS } from 'constants/sections'
-import { INFO_SECTIONS } from 'constants/infoSections'
+import { SECTIONS } from 'constants/sections';
+import { INFO_SECTIONS } from 'constants/infoSections';
 
 // UTILS
 import { setInfos } from './utils';
@@ -17,6 +18,7 @@ import { setInfos } from './utils';
 
 const LayoutHome = () => (
   <Container>
+    <Header />
     {
       SECTIONS.map((section, index) => {
         if (section.isMainInfo !== undefined) {

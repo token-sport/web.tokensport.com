@@ -12,7 +12,7 @@ import arrow from 'assets/arrow@2x.png';
 
 const LangPicker = ({ langs }) => {
   const [ visibility, setVisibility ] = useState(false);
-  const [ language, setLanguage ] = useState({ src: 'assets/flags/Spain-flag@2x.png', name: 'ES' });
+  const [ language, setLanguage ] = useState({ src: langs[0].src, name: langs[0].name });
 
   const handleClickLang = (name, src) => {
     setLanguage({ src: src, name: name });
@@ -25,6 +25,7 @@ const LangPicker = ({ langs }) => {
         src={language.src}
         name={language.name}
         handleClickLang={handleClickLang}
+        isSelected
       />
       <div>
         <Image src={arrow} width="12px" height="8px" alt="arrow"/>

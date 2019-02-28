@@ -7,6 +7,7 @@ export default styled.div`
   display: flex;
   align-items: center;
   justify-self: end;
+  margin-right: 50px;
   border-right: 1px solid white;
 
   > div img {
