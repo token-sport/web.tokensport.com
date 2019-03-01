@@ -24,9 +24,13 @@ export const Button = styled.button`
     outline: none;
   }
 
-
-  @media (max-width: 576.98px) {
+  @media (max-width: 867px) {
     width: ${({ small }) => small ? '100px' : '120px'};
+    height: 40px;
+  }
+
+  @media (mix-width: 1040px) {
+    width: ${({ small }) => small ? '90px' : '140px'};
     height: 40px;
   }
   
