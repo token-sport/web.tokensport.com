@@ -17,7 +17,19 @@ export const Container = styled.section`
     > div:first-child > img {
       width: 100%;
       height: 100%;
-      margin-bottom: 50px;
+      margin: ${({ section }) => section === 1 ? '0 0 50px 0' : '0 0 50px 0'};
+    }
+  }
+
+  @media (min-height: 650px) and (max-height: 720px) {
+    > div:first-child {
+      margin: ${({ section }) => section === 0 ? '10vh 0 50px 0' : '0 0 50px 0'};
+    }
+  }
+
+  @media (min-height: 721px) and (max-height: 850px) {
+    > div:first-child {
+      margin: ${({ section }) => section === 0 ? '20vh 0 50px 0' : '0 0 50px 0'};
     }
   }
 
@@ -63,9 +75,6 @@ export const SideSection = styled.div`
   > div {
     margin: 50px 0;
     padding: 30px 40px;
-  }
-  @media (max-width: 576.98px) {
-    margin-top: 20%;
   }
 `
 
