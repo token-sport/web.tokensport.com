@@ -13,13 +13,17 @@ export const CarouselSection = styled.section`
   }
 
   @media (min-width: 576px) and (max-width: 767.98px) {
-    margin: 40px;
+    margin: 120px 40px 40px 40px;
     width: calc( 100% - 80px);
   }
 
-  @media (min-width: 768px) and (max-width: 1000px) {
-    margin: 50px;
-    width: calc( 100% - 100px);    
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    margin: 120px 50px 50px 50px;
+    width: calc( 100% - 100px);
+
+    > div:first-child {
+      margin: 0 0 20px 0;
+    }
   }
 `
 
@@ -56,17 +60,33 @@ export const CarouselContent = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 230px;
+  height: 50vh;
+
   > div:last-child {
     width: 50%;
   }
+
   @media (max-width: 576.98px) {
+    height: 250px;
     > div:last-child {
       width: auto;
       font-size: ${({ theme }) => theme.size.font.xxsm};
     }
   }
+
   @media (min-width: 576px) and (max-width: 767.98px) {
+    > div:last-child {
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    > div:last-child {
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
     > div:last-child {
       width: 80%;
     }

@@ -14,21 +14,23 @@ export const Container = styled.section`
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
-    margin: 30px;
+    margin: 30px 30px 150px 30px;
     width: calc( 100% - 60px);
     >div:nth-child(2) {
       font-weight: 400;
       font-size: ${({ theme }) => theme.size.font.xxsm};
     }
   }
-  @media (min-width: 768px) and (max-width: 1000px) {
-    margin: 50px;
-    width: calc( 100% - 100px);    
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    margin: 50px 50px 120px 50px;
+    width: calc( 100% - 100px);
     >div:nth-child(2) {
       font-weight: 400;
       font-size: ${({ theme }) => theme.size.font.xxsm};
     }
   }
+
 `
 
 export const Grid = styled.div`

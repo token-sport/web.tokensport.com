@@ -24,14 +24,19 @@ export const Button = styled.button`
     outline: none;
   }
 
-  @media (max-width: 867px) {
-    width: ${({ small }) => small ? '100px' : '120px'};
-    height: 40px;
+  @media (max-width: 576.98px) {
+    width: ${({ small }) => small ? '120px' : '140px'};
   }
 
-  @media (mix-width: 1040px) {
-    width: ${({ small }) => small ? '90px' : '140px'};
-    height: 40px;
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: ${({ small }) => small ? '120px' : '140px'};
   }
-  
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    width: ${({ small }) => small ? '120px' : '140px'};
+  }
 `

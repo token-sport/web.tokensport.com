@@ -14,8 +14,8 @@ export const Text = styled.div`
       font-size: ${ ({ size, theme }) => size === 'xlg' ? theme.size.font['lg'] : size === 'lg' ? theme.size.font['md'] : theme.size.font[size]};
    }
 
-   @media (min-width: 768px) and (max-width: 868px) {
-      font-size: ${ ({ size, theme }) => size === 'xlg' ? theme.size.font['lg'] : size === 'lg' ? theme.size.font['md'] : theme.size.font[size]}; 
-   }
+   // @media (min-width: 768px) and (max-width: 868px) {
+   //    font-size: ${ ({ size, theme }) => size === 'xlg' ? theme.size.font['lg'] : size === 'lg' ? theme.size.font['md'] : theme.size.font[size]}; 
+   // }
 
 `
