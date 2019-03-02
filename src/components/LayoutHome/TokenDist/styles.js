@@ -15,6 +15,16 @@ export const TokenDistSection = styled.section`
       text-align: center;
     }
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    > div:first-child {
+      text-align: center;
+    }
+
+    > div:last-child {
+      justify-content: space-evenly;
+    }
+  }
 `
 
 export const TokenDistContainer = styled.div`
@@ -31,5 +41,9 @@ export const TokenDistContainer = styled.div`
   @media (max-width: 576.98px) {
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, 40%);
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: calc( 100vw - 60px );
   }
 `

@@ -34,6 +34,6 @@ export const Input = styled.input.attrs(({ type, value, name, onChange }) => ({
   }
 
   @media (max-width: 576.98px) {
-    width: 270px;
+    width: 100%;
   } 
 `
