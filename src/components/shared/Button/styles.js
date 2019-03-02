@@ -25,7 +25,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: 576.98px) {
-    width: ${({ small }) => small ? '120px' : '140px'};
+    width: ${({ small }) => small ? '100px' : '120px'};
   }
 
   @media (min-width: 576px) and (max-width: 767.98px) {

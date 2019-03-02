@@ -21,7 +21,7 @@ const MainInfo = () => (
     </Description>
     <div className="MainInfoButtons">
       <Button text="Tokenizar" margin="0 20px 0 0" />
-      <Button text="White paper" transparent />
+      <Button text="Lite paper" transparent />
     </div>
   </Container>
 )
