@@ -1,11 +1,10 @@
 import React from 'react';
-import { element, bool } from 'prop-types'
-
+import { number, element, bool } from 'prop-types'
 // STYLES
 import { Container, SideSection, InfoSection } from './styles'
 
-const Section = ({ componentSide, info, isReverse }) => (
-  <Container isReverse={isReverse}>
+const Section = ({ id, componentSide, info, isReverse }) => (
+  <Container isReverse={isReverse} section={id}>
     <SideSection>
       {componentSide}
     </SideSection>
@@ -16,6 +15,7 @@ const Section = ({ componentSide, info, isReverse }) => (
 )
 
 Section.propTypes = {
+  id: number,
   componentSide: element,
   info: element,
   isReverse: bool

@@ -6,6 +6,15 @@ export const TokenDistSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 576.98px) {
+    padding: 100px 30px;
+    width: calc( 100% - 60px);
+    > div:first-child {
+      margin: 0 0 40px 0;
+      text-align: center;
+    }
+  }
 `
 
 export const TokenDistContainer = styled.div`
@@ -15,4 +24,12 @@ export const TokenDistContainer = styled.div`
   grid-template-columns: repeat(auto-fill, 200px);
   justify-content: space-between;
   justify-items: center;
+  > div {
+      text-align: center;
+  }
+
+  @media (max-width: 576.98px) {
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 40%);
+  }
 `

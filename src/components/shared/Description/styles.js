@@ -9,4 +9,12 @@ export const Description = styled.div`
    display: flex;
    flex-direction: ${({ direction }) => direction};
    width: ${({ width }) => width};
+
+   @media (max-width: 576.98px) {
+      font-size: ${({ size, theme }) => size === 'md' ? theme.size.font['xsm'] : theme.size.font[size]};
+   }
+
+   @media (min-width: 768px) and (max-width: 1000px) {
+      font-size: ${({ size, theme }) => size === 'md' ? theme.size.font['xsm'] : theme.size.font[size]};
+   }
 `

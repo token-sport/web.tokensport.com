@@ -21,4 +21,16 @@ export default styled.header`
       display: none;
     }
   }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: calc( 100% - 80px);    
+    padding: 0 40px;
+    grid-template-columns: 80px 4fr;
+    > div:last-child {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1000px) {
+    width: calc( 100% - 100px);    
+    padding: 0 50px;
+  }
 `
