@@ -19,7 +19,7 @@ const MainInfo = () => (
       <span>La primer Dapp que le da valor</span>
       <span>a tus emociones. ¡Haz llover Tokens!</span>
     </Description>
-    <div>
+    <div className="MainInfoButtons">
       <Button text="Tokenizar" margin="0 20px 0 0" />
       <Button text="White paper" transparent />
     </div>

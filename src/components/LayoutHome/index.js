@@ -26,6 +26,7 @@ const LayoutHome = () => (
           return (
             <Section
               key={section.id}
+              id={section.id}
               isReverse={section.isReverse}
               componentSide={section.componentSide(index !== 0 ? infoSection.image : '')}
               info={index === 0 ? section.components[0]() : setInfos(infoSection, section.components, section.isReverse)}

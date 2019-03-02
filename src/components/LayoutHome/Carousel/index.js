@@ -62,7 +62,7 @@ const Carousel = () => {
 
   return (
     <CarouselSection>
-      <Title size="xlg" bold="800" margin="0 0 50px 0">Roadmap</Title>
+      <Title size="xlg" bold="700" margin="0 0 6% 0">Roadmap</Title>
       <CarouselContainer>
 
         {Arrow(handleBackward, true)}

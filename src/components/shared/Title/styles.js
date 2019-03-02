@@ -11,7 +11,11 @@ export const Text = styled.div`
    flex-direction: ${ ({ size }) => size === 'xlg' ? 'column' : 'unset'};
 
    @media (max-width: 576.98px) {
-      font-size: ${ ({ size, theme }) => size === 'xlg' ? theme.size.font['lg'] : theme.size.font[size]};
+      font-size: ${ ({ size, theme }) => size === 'xlg' ? theme.size.font['lg'] : size === 'lg' ? theme.size.font['md'] : theme.size.font[size]};
    }
+
+   // @media (min-width: 768px) and (max-width: 868px) {
+   //    font-size: ${ ({ size, theme }) => size === 'xlg' ? theme.size.font['lg'] : size === 'lg' ? theme.size.font['md'] : theme.size.font[size]}; 
+   // }
 
 `
