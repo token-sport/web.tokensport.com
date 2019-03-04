@@ -40,17 +40,6 @@ export const Grid = styled.div`
   justify-items: center;
   margin: 40px 0px;
 
-  > div {
-    > div {
-      > div {
-        > img {
-          -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
-          filter: grayscale(90%);
-        }
-      } 
-    }
-  }
-
   @media (max-width: 576.98px) {
     display: flex;
     justify-content: unset;

@@ -12,7 +12,7 @@ import { CircleImage, Country, Container } from './styles'
 const InfoUser = ({ image, name, profession, country, shadow, networks }) => (
   <Container>
     <CircleImage shadow={shadow}>
-      <Image src={image} alt={name} height="100px" width="100px" />
+      <Image src={image} alt={name} height="100px" width="100px" isGray />
     </CircleImage>
     <Text margin="20px 0 0" size="xmd" bold="600">{name}</Text>
     <Text size="xsm">{profession}</Text>
