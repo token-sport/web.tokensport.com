@@ -148,7 +148,7 @@ export const team = [
   {
     name: 'Camilo Suárez',
     profession: 'BlockChain Legal Lead',
-    photo: 'https://tokensport.co/wp-content/uploads/2018/12/Diseño-sin-título-1.png',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FCamilo.png?alt=media&token=8c123a25-35a6-4e05-ae20-dc819bf573ee',
     country: 'Colombia',
     color: 'neonGreen',
     networks: [
@@ -162,7 +162,7 @@ export const team = [
   {
     name: 'Philippe Boland',
     profession: 'Advisor',
-    photo: 'https://tokensport.co/wp-content/uploads/2018/11/pp-1.jpg',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FPhilip.jpg?alt=media&token=db0c8133-3d04-4d5c-bf84-0f86dba490a4',
     country: 'Francia',
     color: 'neonGreen',
     networks: [
@@ -181,7 +181,7 @@ export const team = [
   {
     name: 'Carolina Velásquez',
     profession: 'CTO & CBO',
-    photo: 'https://tokensport.co/wp-content/uploads/2019/01/caro-01-01.png',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FCarolina.jpg?alt=media&token=4d712eed-207d-4ab9-8214-4f7dc78208bc',
     country: 'Colombia',
     color: 'neonOrange',
     networks: [
@@ -195,7 +195,7 @@ export const team = [
   {
     name: 'Esteban Aragón',
     profession: 'Fullstack Developer',
-    photo: 'https://tokensport.co/wp-content/uploads/2018/12/IMG_20171118_135504_729.jpg',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FEsteban.jpg?alt=media&token=405f1670-9a26-481a-a8a3-f19cdcfde07c',
     country: 'Colombia',
     color: 'neonOrange',
     networks: [
@@ -214,7 +214,7 @@ export const team = [
   {
     name: 'Steven Anaya',
     profession: 'UI / UX Designer',
-    photo: 'https://tokensport.co/wp-content/uploads/2018/12/photo-steven.jpg-4.png',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FSteven.png?alt=media&token=1685655a-a759-4409-9aa8-6213a1f487a2',
     country: 'Colombia',
     color: 'neonOrange',
     networks: [
@@ -233,7 +233,7 @@ export const team = [
   {
     name: 'Manuel Reyes',
     profession: 'Director de Marketing',
-    photo: 'https://tokensport.co/wp-content/uploads/2019/01/Perfil-negro.jpg',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FPerfil%20negro.jpg?alt=media&token=68356190-2900-4a24-bf94-e32ec9922afa',
     country: 'México',
     color: 'neonBlue',
     networks: [
@@ -247,7 +247,7 @@ export const team = [
   {
     name: 'Fabian Delgado',
     profession: 'Media Partner',
-    photo: 'https://tokensport.co/wp-content/uploads/2018/12/foto.png',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FFabian.png?alt=media&token=f12ab55a-bef7-4de6-98d4-5733984f5b3d',
     country: 'Colombia',
     color: 'neonBlue',
     networks: [
@@ -261,7 +261,7 @@ export const team = [
   {
     name: 'Santiago Guzmán',
     profession: 'Media Partner',
-    photo: 'https://tokensport.co/wp-content/uploads/2018/12/Diseño-sin-título.png',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FSantiago.png?alt=media&token=c23d73fb-2b6c-4c38-81d6-1ef3d8742f3c',
     country: 'Colombia',
     color: 'neonBlue',
     networks: [
