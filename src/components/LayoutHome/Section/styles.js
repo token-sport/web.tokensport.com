@@ -10,13 +10,20 @@ export const Container = styled.section`
   margin: ${({ isReverse }) => !isReverse ? '100px 0 100px 100px' : '100px 100px 100px 0'};
   height: ${({ section }) => section === 0 ? '100vh' : 'auto'};;
 
+  > div:first-child > img {
+    position: ${({ section }) => section === 0 ? 'absolute' : 'unset'};
+    top: 0;
+    left: 20%;
+  }
+
   @media (max-width: 576.98px) {
     margin: 30px 0 30px 30px;
     width: calc( 100% - 60px);
     flex-direction: ${({ section }) => section === 10 ? 'column-reverse' : 'column'};
     > div:first-child > img {
       width: 100%;
-      height: 100%;
+      height: ${({ section }) => section === 0 ? '70%' : '100%'};
+      left: 0;
       margin: ${({ section }) => section === 1 ? '0 0 50px 0' : '0 0 50px 0'};
     }
   }
@@ -38,8 +45,9 @@ export const Container = styled.section`
     width: calc( 100% - 80px);
     flex-direction: ${({ section }) => section === 10 ? 'column-reverse' : 'column'};
     > div:first-child > img {
-      width: 80%;
-      height: 80%;
+      width: ${({ section }) => section === 0 ? '100%' : '80%'} ;
+      height: ${({ section }) => section === 0 ? '70%' : '80%'} ;
+      left: 0;
       margin: ${({ section }) => section === 1 ? '100px 0 60px 0' : '0 0 60px 0'};
     }
   }
@@ -61,7 +69,7 @@ export const Container = styled.section`
     margin: 50px 0 50px 50px;
 
     > div:first-child > img {
-      width: 90%;
+      width: ${({ section }) => section === 0 ? '100%' : '90%'} ;
       height: 90%;
       margin: ${({ section }) => section === 1 ? '100px 0 60px 0' : '0 0 60px 0'};
     }
