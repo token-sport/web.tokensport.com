@@ -19,7 +19,7 @@ export const SECTIONS = [
   {
     id: 0,
     components: [() => <MainInfo />],
-    componentSide: () => <Image src="" alt="logo" height="580px" width="580px" isIcon/>,
+    componentSide: () => <Image src="https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/illustrations%2FTokeniza-tus-emociones%402x.png?alt=media&token=e05753f2-859f-451e-9160-0611e4a3272e" alt="logo" height="100%" width="100%" isIcon/>,
     isReverse: false
   },
   {
