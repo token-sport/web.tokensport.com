@@ -273,3 +273,26 @@ export const team = [
     ]
   },
 ]
+
+export const PARTNERS = [
+  {
+    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
+    name: 'CriptoLatin Fest',
+  },
+  {
+    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
+    name: 'CriptoLatin Fest',
+  },
+  {
+    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
+    name: 'CriptoLatin Fest',
+  },
+  {
+    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
+    name: 'CriptoLatin Fest',
+  },
+  {
+    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
+    name: 'CriptoLatin Fest',
+  },
+]
