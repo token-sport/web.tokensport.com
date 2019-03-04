@@ -39,6 +39,7 @@ export const Grid = styled.div`
   justify-content: center;
   justify-items: center;
   margin: 40px 0px;
+
   @media (max-width: 576.98px) {
     display: flex;
     justify-content: unset;

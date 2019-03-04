@@ -10,6 +10,7 @@ import TokenDist from 'components/LayoutHome/TokenDist';
 import Card from 'components/shared/Cards'
 import Form from 'components/LayoutHome/Form'
 import Carousel from 'components/LayoutHome/Carousel'
+import Partners from 'components/LayoutHome/Partners'
 
 
 // CONTANTS
@@ -19,7 +20,7 @@ export const SECTIONS = [
   {
     id: 0,
     components: [() => <MainInfo />],
-    componentSide: () => <Image src="https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/illustrations%2FTokeniza-tus-emociones%402x.png?alt=media&token=e05753f2-859f-451e-9160-0611e4a3272e" alt="logo" height="100%" width="100%" isIcon/>,
+    componentSide: () => <Image src="https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/illustrations%2FTokeniza-tus-emociones%402x.png?alt=media&token=e05753f2-859f-451e-9160-0611e4a3272e" alt="logo" height="100%" width="100%" isIcon />,
     isReverse: false
   },
   {
@@ -28,7 +29,7 @@ export const SECTIONS = [
       (title, description) => <SecondaryInfo title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: logo => <Image src={logo} alt="Que rayos es token sport" height="500px" width="500px" isIcon/>,
+    componentSide: logo => <Image src={logo} alt="Que rayos es token sport" height="500px" width="500px" isIcon />,
     isReverse: true,
     info: 'sectionTwo'
   },
@@ -39,7 +40,7 @@ export const SECTIONS = [
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: logo => <Image src={logo} alt="Comparte tus emociones" height="580px" width="580px" isIcon/>,
+    componentSide: logo => <Image src={logo} alt="Comparte tus emociones" height="580px" width="580px" isIcon />,
     isReverse: false,
     info: 'sectionThree'
   },
@@ -60,7 +61,7 @@ export const SECTIONS = [
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: logo => <Image src={logo} alt="Tokenizamos" height="550px" width="550px" isIcon/>,
+    componentSide: logo => <Image src={logo} alt="Tokenizamos" height="550px" width="550px" isIcon />,
     isReverse: false,
     info: 'sectionFive'
   },
@@ -86,6 +87,10 @@ export const SECTIONS = [
   {
     id: 8,
     component: key => <GridTeam key={key} team={TEAM} />
+  },
+  {
+    id: 9,
+    component: key => <Partners key={key} />
   },
   {
     id: 10,
