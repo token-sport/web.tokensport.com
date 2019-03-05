@@ -7,7 +7,7 @@ import { Input, Container, Label } from './styles'
 const InputComponent = ({ label, type, name, value, onChange, width }) => (
   <Container>
     <Label>{label}</Label>
-    <Input type={type} name={name} value={value} onChange={onChange} width={width} />
+    <Input type={type} name={name} value={value} onChange={event => onChange(event, name)} width={width} />
   </Container>
 )
 

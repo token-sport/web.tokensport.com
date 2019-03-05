@@ -1,4 +1,5 @@
 import React from 'react';
+import { func, string } from 'prop-types';
 
 // COMPONENTS
 import Header from './Header';
@@ -16,7 +17,13 @@ import { INFO_SECTIONS } from 'constants/infoSections';
 import { setInfos } from './utils';
 
 
-const LayoutHome = () => {
+const LayoutHome = ({
+  handleOnChange,
+  nameForm,
+  lastNameForm,
+  emailForm,
+  handleSubmitForm
+}) => {
 
   const mainSection = SECTIONS[0]
   const featuresSection = SECTIONS.filter((section, index) => index > 0 && index < 6)
@@ -69,13 +76,21 @@ const LayoutHome = () => {
         idSection="#subscribe"
         id={formSection.id}
         isReverse={formSection.isReverse}
-        componentSide={formSection.componentSide(INFO_SECTIONS[formSection.info].image)}
+        componentSide={formSection.componentSide(handleOnChange, nameForm, lastNameForm, emailForm, handleSubmitForm)}
         info={setInfos(INFO_SECTIONS[formSection.info], formSection.components, formSection.isReverse)}
       />
-      
+
       <Footer />
     </Container>
   )
+}
+
+LayoutHome.propTypes = {
+  handleOnChange: func,
+  nameForm: string,
+  lastNameForm: string,
+  emailForm: string,
+  handleSubmitForm: func
 }
 
 export default LayoutHome;
