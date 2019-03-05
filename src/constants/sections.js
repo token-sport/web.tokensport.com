@@ -99,9 +99,10 @@ export const SECTIONS = [
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
       (key, logo, title, altImage, description) => <TertiaryInfo key={key} image={logo} altImage={altImage} title={title} description={description} />,
     ],
-    componentSide: () => (<Card padding="50px" withGradient={true} showInHover={false}>
-      <Form />
-    </Card>),
+    componentSide: (onChange, name, lastname, email, submitForm) => (
+      <Card padding="50px" withGradient={true} showInHover={false}>
+        <Form onChange={onChange} name={name} lastname={lastname} email={email} submitForm={submitForm}/>
+      </Card>),
     isReverse: true,
     info: 'sectionEleven'
   },

@@ -23,6 +23,9 @@
          ],
          "fixture/*": [
             "./src/fixture/*"
+         ],
+         "config/*": [
+            "./src/config/*"
          ]
       }
    }
