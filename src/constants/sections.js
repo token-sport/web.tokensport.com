@@ -78,7 +78,7 @@ export const SECTIONS = [
   },
   {
     id: 6,
-    component: key => <Carousel key={key} />
+    component: (key, id) => <Carousel key={key} id={id} />
   },
   {
     id: 7,
@@ -86,7 +86,7 @@ export const SECTIONS = [
   },
   {
     id: 8,
-    component: key => <GridTeam key={key} team={TEAM} />
+    component: (key, id) => <GridTeam key={key} id={id} team={TEAM} />
   },
   {
     id: 9,

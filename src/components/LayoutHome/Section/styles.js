@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.section.attrs((id) => ({ id }))`
   display:flex;
   flex-direction: ${({ isReverse }) => !isReverse ? 'row-reverse' : 'row'};
   align-items: center;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { string } from 'prop-types'
 
 // COMPONENTS
 import ItemTimeline from 'components/shared/ItemTimeline';
@@ -40,7 +41,7 @@ const Arrow = (handleClick, isRotate) => (
   </ArrowStyle>
 )
 
-const Carousel = () => {
+const Carousel = ({ id }) => {
   const [indexCurrent, setCurrentIndex] = useState(0)
   const [current, setCurrent] = useState(ROADMAP[indexCurrent])
   const itemsTimeline = ROADMAP.map((item) => ({ id: item.id, color: item.color }))
@@ -61,7 +62,7 @@ const Carousel = () => {
   }
 
   return (
-    <CarouselSection>
+    <CarouselSection id={id}>
       <Title size="xlg" bold="700" margin="0 0 6% 0">Roadmap</Title>
       <CarouselContainer>
 
@@ -78,6 +79,10 @@ const Carousel = () => {
     </CarouselSection>
   )
 
+}
+
+Carousel.propTypes = {
+  id: string
 }
 
 export default Carousel;

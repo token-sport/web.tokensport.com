@@ -16,28 +16,66 @@ import { INFO_SECTIONS } from 'constants/infoSections';
 import { setInfos } from './utils';
 
 
-const LayoutHome = () => (
-  <Container>
-    <Header />
-    {
-      SECTIONS.map((section, index) => {
-        if (section.componentSide) {
-          const infoSection = INFO_SECTIONS[section.info]
-          return (
-            <Section
-              key={section.id}
-              id={section.id}
-              isReverse={section.isReverse}
-              componentSide={section.componentSide(index !== 0 ? infoSection.image : '')}
-              info={index === 0 ? section.components[0]() : setInfos(infoSection, section.components, section.isReverse)  }
-            />
-          )
+const LayoutHome = () => {
+
+  const mainSection = SECTIONS[0]
+  const featuresSection = SECTIONS.filter((section, index) => index > 0 && index < 6)
+  const roadMapSection = SECTIONS[6]
+  const distributionSection = SECTIONS[7]
+  const gridTeamSection = SECTIONS[8]
+  const partnersSection = SECTIONS[9]
+  const formSection = SECTIONS[10]
+
+  return (
+    <Container>
+      <Header />
+      {/* MAIN SECTION */}
+      <Section
+        isReverse={mainSection.isReverse}
+        componentSide={mainSection.componentSide()}
+        info={mainSection.components[0]()} />
+
+      {/* FEATURES SECTION */}
+      <section id="#features">
+        {
+          featuresSection.map((section) => {
+            const infoSection = INFO_SECTIONS[section.info]
+            return (
+              <Section
+                key={section.id}
+                id={section.id}
+                isReverse={section.isReverse}
+                componentSide={section.componentSide(infoSection.image)}
+                info={setInfos(infoSection, section.components, section.isReverse)}
+              />
+            )
+          })
         }
-        return section.component(section.id)
-      })
-    }
-    <Footer />
-  </Container>
-)
+      </section>
+      {/* ROADMAP SECTION */}
+      {roadMapSection.component(roadMapSection.id, '#roadmap')}
+
+      {/* DISTRIBUTION SECTION */}
+      {distributionSection.component()}
+
+      {/* TEAM SECTION */}
+      {gridTeamSection.component(gridTeamSection.id, '#dreamteam')}
+
+      {/* PARTNERS SECTION */}
+      {partnersSection.component()}
+
+      {/* SUBSCRIBE SECTIONS */}
+      <Section
+        idSection="#subscribe"
+        id={formSection.id}
+        isReverse={formSection.isReverse}
+        componentSide={formSection.componentSide(INFO_SECTIONS[formSection.info].image)}
+        info={setInfos(INFO_SECTIONS[formSection.info], formSection.components, formSection.isReverse)}
+      />
+      
+      <Footer />
+    </Container>
+  )
+}
 
 export default LayoutHome;

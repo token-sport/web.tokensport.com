@@ -5,9 +5,12 @@ import { string } from 'prop-types'
 import Title from 'components/shared/Title'
 import Description from 'components/shared/Description'
 import Button from 'components/shared/Button'
+import { Link } from 'react-scroll';
 
 // STYLES
 import { Container } from './styles';
+
+const redirectLitePaper = () => window.open('https://steemit.com/blockchain/@alefernandez/token-sport-presentacion-publica')
 
 const MainInfo = () => (
   <Container>
@@ -20,8 +23,14 @@ const MainInfo = () => (
       <span>a tus emociones. ¡Haz llover Tokens!</span>
     </Description>
     <div className="MainInfoButtons">
-      <Button text="Tokenizar" margin="0 20px 0 0" />
-      <Button text="Lite paper" transparent />
+      <Link
+        to="#subscribe"
+        smooth={true}
+        duration={500}
+        offset={-100}>
+        <Button text="Tokenizar" margin="0 20px 0 0" />
+      </Link>
+      <Button text="Lite paper" transparent onClick={() => redirectLitePaper()} />
     </div>
   </Container>
 )
