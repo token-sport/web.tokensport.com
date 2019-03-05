@@ -4,7 +4,7 @@ import { number, element, bool } from 'prop-types'
 import { Container, SideSection, InfoSection } from './styles'
 
 const Section = ({ id, componentSide, info, isReverse }) => (
-  <Container isReverse={isReverse} section={id}>
+  <Container isReverse={isReverse} section={id} id="#features">
     <SideSection>
       {componentSide}
     </SideSection>

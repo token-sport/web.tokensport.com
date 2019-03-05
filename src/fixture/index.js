@@ -11,7 +11,7 @@ export const LANGUAGES = [
 ]
 
 export const LINKS = [
-  { name: 'Features', path: '#feature' },
+  { name: 'Features', path: '#features' },
   { name: 'Roadmap', path: '#roadmap' },
   { name: 'Dream Team', path: '#dreamteam' }
 ]
