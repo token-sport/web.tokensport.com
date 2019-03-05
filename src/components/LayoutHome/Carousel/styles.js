@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CarouselSection = styled.section`
+export const CarouselSection = styled.section.attrs((id) => ({ id }))`
   width: calc(100% - 200px);
   margin: 100px;
   > div:first-child {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.section.attrs((id) => ({ id }))`
   background-color: ${({ theme }) => theme.colors.background};
   text-align: center;
   width: calc( 100% - 200px);

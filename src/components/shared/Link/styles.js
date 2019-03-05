@@ -4,8 +4,5 @@ export const LinkStyle = `
   text-decoration: none;
   font-size: 16px;
   font-weight: 100;
-  :hover {
-    color: #00E5FF;
-    text-decoration: underline;
-  }
+  cursor: pointer;
 `

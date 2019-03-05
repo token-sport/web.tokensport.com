@@ -11,7 +11,7 @@ export const LANGUAGES = [
 ]
 
 export const LINKS = [
-  { name: 'Features', path: '#feature' },
+  { name: 'Features', path: '#features' },
   { name: 'Roadmap', path: '#roadmap' },
   { name: 'Dream Team', path: '#dreamteam' }
 ]
@@ -261,7 +261,7 @@ export const team = [
   {
     name: 'Santiago Guzmán',
     profession: 'Media Partner',
-    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FSantiago.png?alt=media&token=c23d73fb-2b6c-4c38-81d6-1ef3d8742f3c',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/dreamTeam%2FSantiago.jpeg?alt=media&token=aa38dd97-68ed-4f9a-bff7-0b04d8e9e916',
     country: 'Colombia',
     color: 'neonBlue',
     networks: [
@@ -280,19 +280,11 @@ export const PARTNERS = [
     name: 'CriptoLatin Fest',
   },
   {
-    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
-    name: 'CriptoLatin Fest',
+    photo: 'https://tokenpartner.co/wp-content/uploads/2017/12/Token_Partner.png',
+    name: 'Token Partner',
   },
   {
-    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
-    name: 'CriptoLatin Fest',
-  },
-  {
-    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
-    name: 'CriptoLatin Fest',
-  },
-  {
-    photo: 'https://www.criptolatinfest.com/wp-content/themes/criptolanding/img/logo_cripto.png',
-    name: 'CriptoLatin Fest',
+    photo: 'https://bitsionarys.com/wp-content/uploads/2018/07/cropped-LOGO-BISIONARYS-SIN-FONDO-PEQUEÑO-4.png',
+    name: 'Bitsionarys',
   },
 ]

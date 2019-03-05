@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const Button = styled.button.attrs((onClick) => ({ onClick }))`
   text-transform: uppercase; 
   border-radius: ${({ theme }) => theme.radius.soft};
   width: ${({ small }) => small ? '120px' : '170px'};
