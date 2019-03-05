@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { toast } from 'react-toastify';
 
-const Toast = (type, message, position) => {
-  toast[type](message, {
-    position: toast.POSITION[position]
-  });
+const Toast = (message, position, isError) => {
+  const options = {
+    position: toast.POSITION[position],
+    className: 'dark-toast',
+    bodyClassName: 'body-dark-toast',
+    progressClassName: isError ? 'dark-progress-error-toast': 'dark-progress-success-toast'
+  }
+
+  return toast(message, options);
 }
 
-export default Toast
+export default Toast;

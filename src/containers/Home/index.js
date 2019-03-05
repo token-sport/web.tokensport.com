@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 // COMPONENTS
 import Layouthome from 'components/LayoutHome';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import Toast from 'components/shared/Toast';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -25,9 +25,9 @@ class Home extends Component {
       const { nameForm: name, lastNameForm: lastname, emailForm: email } = this.state
       await firebase.collection('earlyusers').add({ name, lastname, email })
       this.handleClearFields()
-      Toast('success', 'Cool!', 'BOTTOM_RIGHT')
+      Toast('Good Job! :)', 'BOTTOM_RIGHT', false)
     } catch (error) {
-      console.error(error)
+      Toast('Something wrong happened! :(', 'BOTTOM_RIGHT', true)
       throw new Error(error)
     }
   }
