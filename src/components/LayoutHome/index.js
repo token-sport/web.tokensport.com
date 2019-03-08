@@ -7,7 +7,7 @@ import Section from './Section';
 import Footer from './Footer';
 
 // STYLES
-import { Container, } from './styles';
+import { Container } from './styles';
 
 // CONSTANTS
 import { SECTIONS } from 'constants/sections';
