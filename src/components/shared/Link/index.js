@@ -1,12 +1,12 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, func } from 'prop-types';
 import { Link } from 'react-scroll';
 
 // STYLES
 import 'styled-components/macro';
 import { LinkStyle } from './styles';
 
-const LinkComponent = ({ children, path }) => (
+const LinkComponent = ({ children, path, handleClickMenu = () => false  }) => (
   <Link
     activeClass="active"
     to={path}
@@ -14,7 +14,8 @@ const LinkComponent = ({ children, path }) => (
     smooth={true}
     duration={500}
     offset={-100}
-    css={LinkStyle}>
+    css={LinkStyle}
+    onClick={handleClickMenu}>
     {children}
   </Link>
 )
@@ -25,7 +26,8 @@ LinkComponent.defaultProps = {
 
 LinkComponent.propTypes = {
   children: string,
-  path: string
+  path: string,
+  handleClickMenu: func
 }
 
 export default LinkComponent

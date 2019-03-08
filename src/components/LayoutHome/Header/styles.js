@@ -11,12 +11,12 @@ export default styled.header`
   padding: 0 100px;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background};
-  z-index: 99;
+  z-index: 999;
 
   @media (max-width: 576.98px) {
     width: calc( 100% - 60px);
     padding: 0 30px;
-    grid-template-columns: 80px 4fr;
+    grid-template-columns: 80px 4fr 1fr;
     > div:last-child {
       display: none;
     }
@@ -24,7 +24,7 @@ export default styled.header`
   @media (min-width: 576px) and (max-width: 767.98px) {
     width: calc( 100% - 80px);
     padding: 0 40px;
-    grid-template-columns: 80px 4fr;
+    grid-template-columns: 80px 4fr 1fr;
     > div:last-child {
       display: none;
     }

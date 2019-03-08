@@ -284,7 +284,7 @@ export const PARTNERS = [
     name: 'Token Partner',
   },
   {
-    photo: 'https://bitsionarys.com/wp-content/uploads/2018/07/cropped-LOGO-BISIONARYS-SIN-FONDO-PEQUEÑO-4.png',
+    photo: 'https://firebasestorage.googleapis.com/v0/b/token-sport.appspot.com/o/partners%2FLOGO%20BISIONARYS%20SIN%20FONDO%20(1).png?alt=media&token=7a8a8496-cfb7-49a5-9585-0810270f05b8',
     name: 'Bitsionarys',
   },
 ]

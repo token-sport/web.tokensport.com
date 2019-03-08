@@ -1,8 +1,9 @@
 import React from 'react';
-import { func, string } from 'prop-types';
+import { func, string, bool } from 'prop-types';
 
 // COMPONENTS
 import Header from './Header';
+import OffCanvasMenu from 'components/shared/OffCanvasMenu';
 import Section from './Section';
 import Footer from './Footer';
 
@@ -22,7 +23,9 @@ const LayoutHome = ({
   nameForm,
   lastNameForm,
   emailForm,
-  handleSubmitForm
+  handleSubmitForm,
+  handleClickMenu,
+  isVisibleOffCanvas
 }) => {
 
   const mainSection = SECTIONS[0]
@@ -35,7 +38,10 @@ const LayoutHome = ({
 
   return (
     <Container>
-      <Header />
+      <Header handleClickMenu={handleClickMenu}/>
+      <OffCanvasMenu 
+        isVisibleOffCanvas={isVisibleOffCanvas}
+        handleClickMenu={handleClickMenu}/>
       {/* MAIN SECTION */}
       <Section
         isReverse={mainSection.isReverse}
@@ -91,7 +97,9 @@ LayoutHome.propTypes = {
   nameForm: string,
   lastNameForm: string,
   emailForm: string,
-  handleSubmitForm: func
+  handleSubmitForm: func,
+  isVisibleOffCanvas: bool,
+  handleClickMenu: func
 }
 
 export default LayoutHome;
