@@ -7,7 +7,7 @@ import Section from './Section';
 import Footer from './Footer';
 
 // STYLES
-import { Container, } from './styles';
+import { Container } from './styles';
 
 // CONSTANTS
 import { SECTIONS } from 'constants/sections';
@@ -40,7 +40,8 @@ const LayoutHome = ({
       <Section
         isReverse={mainSection.isReverse}
         componentSide={mainSection.componentSide()}
-        info={mainSection.components[0]()} />
+        info={mainSection.components[0]()}
+        id={mainSection.id} />
 
       {/* FEATURES SECTION */}
       <section id="#features">

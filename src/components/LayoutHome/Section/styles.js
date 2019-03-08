@@ -8,7 +8,7 @@ export const Container = styled.section.attrs((id) => ({ id }))`
   margin: 100px;
   width: calc( 100% - 100px);
   margin: ${({ isReverse }) => !isReverse ? '100px 0 100px 100px' : '100px 100px 100px 0'};
-  height: ${({ section }) => section === 0 ? '100vh' : 'auto'};;
+  height: ${({ section }) => section === 0 ? '100vh' : 'auto'};
 
   > div:first-child > img {
     position: ${({ section }) => section === 0 ? 'absolute' : 'unset'};
