@@ -40,7 +40,8 @@ const LayoutHome = ({
       <Section
         isReverse={mainSection.isReverse}
         componentSide={mainSection.componentSide()}
-        info={mainSection.components[0]()} />
+        info={mainSection.components[0]()}
+        id={mainSection.id} />
 
       {/* FEATURES SECTION */}
       <section id="#features">
