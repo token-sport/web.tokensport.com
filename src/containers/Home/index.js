@@ -14,8 +14,11 @@ class Home extends Component {
   state = {
     nameForm: '',
     lastNameForm: '',
-    emailForm: ''
+    emailForm: '',
+    isVisibleOffCanvas: false,
   }
+
+  handleClickMenu = () => this.setState({ isVisibleOffCanvas: !this.state.isVisibleOffCanvas })
 
   handleOnChange = (event, name) => this.setState({ [name]: event.target.value })
 
@@ -43,7 +46,9 @@ class Home extends Component {
           nameForm={nameForm}
           lastNameForm={lastNameForm}
           emailForm={emailForm}
-          handleSubmitForm={this.handleSubmitForm} />
+          handleSubmitForm={this.handleSubmitForm}
+          isVisibleOffCanvas={this.state.isVisibleOffCanvas}
+          handleClickMenu={this.handleClickMenu} />
         <ToastContainer />
       </Fragment>
     )

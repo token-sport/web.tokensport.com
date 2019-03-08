@@ -1,21 +1,29 @@
-import React from 'react';
-import { array, bool } from 'prop-types';
+import React from "react";
+import { array, bool, func } from "prop-types";
 
 // COMPONENTS
-import Link from 'components/shared/Link';
+import Link from "components/shared/Link";
 
 // STYLES
-import LinksContainer from './styles';
+import LinksContainer from "./styles";
 
-const Links = ({ arrLink, isColumn }) => <LinksContainer isColumn={ isColumn }>
-  {
-    arrLink.map((link) => <Link key={link.name} path={ link.path }>{link.name}</Link>)
-  }
-</LinksContainer>
+const Links = ({ arrLink, isColumn, handleClickMenu }) => (
+  <LinksContainer isColumn={isColumn}>
+    {arrLink.map(link => (
+      <Link 
+        key={link.name}
+        path={link.path}
+        handleClickMenu={handleClickMenu}>
+        {link.name}
+      </Link>
+    ))}
+  </LinksContainer>
+);
 
 Links.propTypes = {
   arrLink: array,
-  isColumn: bool
-}
+  isColumn: bool,
+  handleClickMenu: func
+};
 
 export default Links;
