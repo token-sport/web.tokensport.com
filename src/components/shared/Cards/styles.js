@@ -11,7 +11,6 @@ export const Card = styled.div`
   width: 270px;
   height: fit-content;
   padding: ${({ padding }) => padding};
-  cursor: pointer;
   :hover {
     box-shadow: ${({ theme, showInHover }) => showInHover ? theme.shadows.dark : ''};
     transition: ${({ showInHover }) => showInHover ? '500ms' : 'unset'};

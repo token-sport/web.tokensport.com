@@ -1,22 +1,34 @@
-import React from 'react';
-import { array, string, oneOfType, object } from 'prop-types';
+import React from "react";
+import { array, string, oneOfType, object, bool } from "prop-types";
 
 // STYLES
-import { Description } from './styles'
+import { Description } from "./styles";
 
-const DescriptionComponent = ({ size, children, margin, direction, color, bold }) =>
-  <Description 
+const DescriptionComponent = ({
+  size,
+  children,
+  margin,
+  direction,
+  color,
+  bold,
+  isHero
+}) => (
+  <Description
     margin={margin}
     size={size}
     direction={direction}
     color={color}
-    bold={bold}>{children}</Description>
+    bold={bold}
+    isHero={isHero}
+  >
+    {children}
+  </Description>
+);
 
 DescriptionComponent.defaultProps = {
-  margin: '0px',
-  direction: 'unset',
-  width: 'auto'
-}
+  margin: "0px",
+  direction: "unset",
+};
 
 DescriptionComponent.propTypes = {
   children: oneOfType([array, string, object]),
@@ -24,7 +36,8 @@ DescriptionComponent.propTypes = {
   margin: string,
   direction: string,
   color: string,
-  bold: string
-}
+  bold: string,
+  isHero: bool
+};
 
-export default DescriptionComponent
+export default DescriptionComponent;

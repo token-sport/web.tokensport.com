@@ -1,5 +1,5 @@
 import React from 'react';
-import { array, string } from 'prop-types'
+import { object, string } from 'prop-types'
 
 // COMPONENTS
 import Card from 'components/shared/Cards';
@@ -10,15 +10,15 @@ import { Container, Grid, SubTitle } from './styles'
 import Title from 'components/shared/Title';
 import Description from 'components/shared/Description';
 
-const GridTeam = ({ team, id }) => (
+const GridTeam = ({ teamInfo, id }) => (
   <Container id={id}>
-    <Title size="xlg" bold="800">Dream Team</Title>
+    <Title size="xlg" bold="800">{teamInfo.title}</Title>
     <Description size="xmd" color="white" margin="10px 0">
-      <SubTitle>Descubre el equipo titular de Token Sport</SubTitle>
+      <SubTitle>{teamInfo.description}</SubTitle>
     </Description>
     <Grid>
       {
-        team.map((item, index) => (
+        teamInfo.team.map((item, index) => (
           <Card key={index} padding="40px" withGradient={false} showInHover>
             <InfoUser
               image={item.photo}
@@ -36,11 +36,11 @@ const GridTeam = ({ team, id }) => (
 )
 
 GridTeam.defaultProps = {
-  team: []
+  teamInfo: {}
 }
 
 GridTeam.propTypes = {
-  team: array,
+  teamInfo: object,
   id: string
 }
 

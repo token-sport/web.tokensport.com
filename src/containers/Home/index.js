@@ -1,59 +1,84 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useState, useEffect, useCallback } from "react";
+import { useDispatch } from "redux-react-hook";
+import { object } from "prop-types";
 
 // COMPONENTS
-import Layouthome from 'components/LayoutHome';
-import { ToastContainer } from 'react-toastify';
-import Toast from 'components/shared/Toast';
-import 'react-toastify/dist/ReactToastify.css';
+import Layouthome from "components/LayoutHome";
+import { ToastContainer } from "react-toastify";
+import Toast from "components/shared/Toast";
+import "react-toastify/dist/ReactToastify.css";
 
 // FIREBASE
-import { firebase } from 'config/';
+import { firebase } from "config/";
 
-class Home extends Component {
+// TYPES
+import { SWITCH_PATH_LOCATION } from "actionTypes/";
 
-  state = {
-    nameForm: '',
-    lastNameForm: '',
-    emailForm: '',
-    isVisibleOffCanvas: false,
-  }
+const Home = ({ location }) => {
+  const pathLocation = location.pathname;
+  const [formFields, setFormFields] = useState({
+    nameForm: "",
+    lastNameForm: "",
+    emailForm: ""
+  });
 
-  handleClickMenu = () => this.setState({ isVisibleOffCanvas: !this.state.isVisibleOffCanvas })
+  // REDUX Dispatch HOOK
+  const dispatch = useDispatch();
 
-  handleOnChange = (event, name) => this.setState({ [name]: event.target.value })
-
-  handleSubmitForm = async (event) => {
-    event.preventDefault()
-    try {
-      const { nameForm: name, lastNameForm: lastname, emailForm: email } = this.state
-      await firebase.collection('earlyusers').add({ name, lastname, email })
-      this.handleClearFields()
-      Toast('Good Job! :)', 'BOTTOM_RIGHT', false)
-    } catch (error) {
-      Toast('Something wrong happened! :(', 'BOTTOM_RIGHT', true)
-      throw new Error(error)
-    }
-  }
-
-  handleClearFields = () => this.setState({ nameForm: '', lastNameForm: '', emailForm: '' })
-
-  render() {
-    const { nameForm, lastNameForm, emailForm } = this.state
+  const changePathLocation = useCallback(path => {
     return (
-      <Fragment>
-        <Layouthome
-          handleOnChange={this.handleOnChange}
-          nameForm={nameForm}
-          lastNameForm={lastNameForm}
-          emailForm={emailForm}
-          handleSubmitForm={this.handleSubmitForm}
-          isVisibleOffCanvas={this.state.isVisibleOffCanvas}
-          handleClickMenu={this.handleClickMenu} />
-        <ToastContainer />
-      </Fragment>
-    )
-  }
-}
+      dispatch({
+        type: SWITCH_PATH_LOCATION,
+        value: path
+      }),
+      []
+    );
+  });
 
+  useEffect(() => {
+    changePathLocation(pathLocation);
+  }, []);
+
+  const handleOnChange = (event, name) => {
+    setFormFields({ ...formFields, [name]: event.target.value });
+  };
+
+  const handleSubmitForm = async event => {
+    event.preventDefault();
+    try {
+      const {
+        nameForm: name,
+        lastNameForm: lastname,
+        emailForm: email
+      } = formFields;
+      await firebase.collection("earlyusers").add({ name, lastname, email });
+      handleClearFields();
+      Toast("Good Job! :)", "BOTTOM_RIGHT", false);
+    } catch (error) {
+      Toast("Something wrong happened! :(", "BOTTOM_RIGHT", true);
+      throw new Error(error);
+    }
+  };
+
+  const handleClearFields = () =>
+    setFormFields({ nameForm: "", lastNameForm: "", emailForm: "" });
+
+  return (
+    <Fragment>
+      <Layouthome
+        handleOnChange={handleOnChange}
+        nameForm={formFields.nameForm}
+        lastNameForm={formFields.lastNameForm}
+        emailForm={formFields.emailForm}
+        handleSubmitForm={handleSubmitForm}
+      />
+      <ToastContainer />
+    </Fragment>
+  );
+};
+
+Home.propTypes = {
+  location: object
+}
 
 export default Home;

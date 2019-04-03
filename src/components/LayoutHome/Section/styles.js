@@ -14,6 +14,7 @@ export const Container = styled.section.attrs((id) => ({ id }))`
     position: ${({ section }) => section === 0 ? 'absolute' : 'unset'};
     top: 0;
     left: 20%;
+    z-index: 1;
   }
 
   @media (max-width: 576.98px) {

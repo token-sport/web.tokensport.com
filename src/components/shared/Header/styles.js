@@ -7,11 +7,11 @@ export default styled.header`
   top: 0%;
   left: 0%;
   display: grid;
-  grid-template-columns: 80px 4fr 2fr;
+  grid-template-columns: 80px 4fr auto;
   padding: 0 100px;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background};
-  z-index: 999;
+  z-index: 9999;
 
   @media (max-width: 576.98px) {
     width: calc( 100% - 60px);

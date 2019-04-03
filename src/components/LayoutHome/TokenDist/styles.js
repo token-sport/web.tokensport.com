@@ -34,6 +34,8 @@ export const TokenDistContainer = styled.div`
   grid-template-columns: repeat(auto-fill, 200px);
   justify-content: space-between;
   justify-items: center;
+  align-items: center;
+
   > div {
       text-align: center;
   }

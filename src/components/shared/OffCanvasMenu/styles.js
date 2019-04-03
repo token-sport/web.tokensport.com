@@ -12,7 +12,7 @@ export default styled.div`
   top: 0%;
   background-color: ${({ theme }) => theme.colors.background}
   transition: .5s ease-in-out;
-  z-index: 99;
+  z-index: 999;
 
   > div a {
     font-size: 2em;

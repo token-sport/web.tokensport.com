@@ -1,5 +1,5 @@
 import React from 'react';
-import { object, string } from 'prop-types';
+import { oneOfType, object, string } from 'prop-types';
 
 // COMPONENTS
 import Title from 'components/shared/Title'
@@ -16,8 +16,8 @@ const SecondaryInfo = ({ title, description, widthDescription }) => (
 )
 
 SecondaryInfo.propTypes = {
-  title: object.isRequired,
-  description: object.isRequired,
+  title: oneOfType([object, string]),
+  description: oneOfType([object, string]),
   widthDescription: string
 }
 

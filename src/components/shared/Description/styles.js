@@ -8,13 +8,19 @@ export const Description = styled.div`
   margin: ${({ margin }) => margin};
   display: flex;
   flex-direction: ${({ direction }) => direction};
-  width: ${({ width }) => width};
+  width: ${({ isHero }) => isHero ? '37vw' : 'auto'}
 
   @media (max-width: 576.98px) {
     font-size: ${({ size, theme }) => size === 'md' ? theme.size.font['xsm'] : theme.size.font[size]};
+    width: ${({ isHero }) => isHero ? '80vw' : 'auto'}
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: ${({ isHero }) => isHero ? '80vw' : 'auto'}
   }
 
   @media (min-width: 768px) and (max-width: 991.98px) {
-  font-size: ${({ size, theme }) => size === 'md' ? theme.size.font['xsm'] : theme.size.font[size]};
+    font-size: ${({ size, theme }) => size === 'md' ? theme.size.font['xsm'] : theme.size.font[size]};
+    width: ${({ isHero }) => isHero ? '80vw' : 'auto'}
   }
 `

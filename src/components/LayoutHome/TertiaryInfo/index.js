@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, object } from 'prop-types';
+import { oneOfType, object, string } from 'prop-types';
 
 // COMPONENTS
 import Title from 'components/shared/Title';
@@ -27,8 +27,8 @@ TertiaryInfo.defaultProps = {
 TertiaryInfo.propTypes = {
   image: string,
   altImage: string,
-  title: object,
-  description: object,
+  title: oneOfType([object, string]),
+  description: oneOfType([object, string]),
   width: string
 }
 

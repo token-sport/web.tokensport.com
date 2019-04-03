@@ -1,4 +1,3 @@
-import React from 'react';
 import { toast } from 'react-toastify';
 
 const Toast = (message, position, isError) => {
@@ -13,3 +12,4 @@ const Toast = (message, position, isError) => {
 }
 
 export default Toast;
+

@@ -5,13 +5,14 @@ import { string, array } from 'prop-types'
 import Image from 'components/shared/Image';
 import Text from 'components/shared/Title';
 import Networks from 'components/shared/Network';
+import CircleImage from 'components/shared/CircleImage';
 
 // STYLES
-import { CircleImage, Country, Container } from './styles'
+import { Country, Container } from './styles'
 
 const InfoUser = ({ image, name, profession, country, shadow, networks }) => (
   <Container>
-    <CircleImage shadow={shadow}>
+    <CircleImage shadow={shadow} width="100px" height="100px">
       <Image src={image} alt={name} height="100px" width="100px" isGray />
     </CircleImage>
     <Text margin="20px 0 0" size="xmd" bold="600">{name}</Text>

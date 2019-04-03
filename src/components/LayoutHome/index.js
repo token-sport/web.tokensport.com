@@ -1,105 +1,99 @@
-import React from 'react';
-import { func, string, bool } from 'prop-types';
+import React, { useCallback } from "react";
+import { useMappedState } from "redux-react-hook";
+import { func, string } from "prop-types";
 
 // COMPONENTS
-import Header from './Header';
-import OffCanvasMenu from 'components/shared/OffCanvasMenu';
-import Section from './Section';
-import Footer from './Footer';
+import MainInfo from "./MainInfo";
+import Feature from "./Feature";
+import Carousel from "./Carousel";
+import TokenDist from "./TokenDist";
+import GridTeam from "./GridTeam";
+import Partners from "./Partners";
+import Form from "./Form";
 
 // STYLES
-import { Container } from './styles';
-
-// CONSTANTS
-import { SECTIONS } from 'constants/sections';
-import { INFO_SECTIONS } from 'constants/infoSections';
-
-// UTILS
-import { setInfos } from './utils';
-
+import { Container } from "./styles";
 
 const LayoutHome = ({
   handleOnChange,
   nameForm,
   lastNameForm,
   emailForm,
-  handleSubmitForm,
-  handleClickMenu,
-  isVisibleOffCanvas
+  handleSubmitForm
 }) => {
+  //REDUX Mapped HOOK
+  const mapState = useCallback(
+    state => ({
+      heroInfo: state.getIn(["language", "contentLang", "hero"]),
+      featuresInfo: state.getIn(["language", "contentLang", "features"]),
+      roadmapInfo: state.getIn(["language", "contentLang", "roadmap"]),
+      tokenInfo: state.getIn(["language", "contentLang", "tokenDist"]),
+      teamInfo: state.getIn(["language", "contentLang", "dreamTeam"]),
+      partnersInfo: state.getIn(["language", "contentLang", "partners"]),
+      subscribeInfo: state.getIn(["language", "contentLang", "subscribe"])
+    }),
+    []
+  );
 
-  const mainSection = SECTIONS[0]
-  const featuresSection = SECTIONS.filter((section, index) => index > 0 && index < 6)
-  const roadMapSection = SECTIONS[6]
-  const distributionSection = SECTIONS[7]
-  const gridTeamSection = SECTIONS[8]
-  const partnersSection = SECTIONS[9]
-  const formSection = SECTIONS[10]
+  const {
+    heroInfo,
+    featuresInfo,
+    roadmapInfo,
+    tokenInfo,
+    teamInfo,
+    partnersInfo,
+    subscribeInfo
+  } = useMappedState(mapState);
 
   return (
     <Container>
-      <Header handleClickMenu={handleClickMenu}/>
-      <OffCanvasMenu 
-        isVisibleOffCanvas={isVisibleOffCanvas}
-        handleClickMenu={handleClickMenu}/>
       {/* MAIN SECTION */}
-      <Section
-        isReverse={mainSection.isReverse}
-        componentSide={mainSection.componentSide()}
-        info={mainSection.components[0]()}
-        id={mainSection.id} />
+      <MainInfo heroInfo={heroInfo.toJS()} />
 
       {/* FEATURES SECTION */}
       <section id="#features">
-        {
-          featuresSection.map((section) => {
-            const infoSection = INFO_SECTIONS[section.info]
-            return (
-              <Section
-                key={section.id}
-                id={section.id}
-                isReverse={section.isReverse}
-                componentSide={section.componentSide(infoSection.image)}
-                info={setInfos(infoSection, section.components, section.isReverse)}
-              />
-            )
-          })
-        }
+        {featuresInfo.toJS().map((feature, index) => (
+          <Feature key={index} featureInfo={feature} />
+        ))}
       </section>
+
       {/* ROADMAP SECTION */}
-      {roadMapSection.component(roadMapSection.id, '#roadmap')}
+      <Carousel id="#roadmap" roadmapInfo={roadmapInfo.toJS()} />
 
       {/* DISTRIBUTION SECTION */}
-      {distributionSection.component()}
+      <TokenDist tokenInfo={tokenInfo.toJS()} />
 
       {/* TEAM SECTION */}
-      {gridTeamSection.component(gridTeamSection.id, '#dreamteam')}
+      <GridTeam id="#dreamteam" teamInfo={teamInfo.toJS()} />
 
       {/* PARTNERS SECTION */}
-      {partnersSection.component()}
+      <Partners partnersInfo={partnersInfo.toJS()} />
 
       {/* SUBSCRIBE SECTIONS */}
-      <Section
-        idSection="#subscribe"
-        id={formSection.id}
-        isReverse={formSection.isReverse}
-        componentSide={formSection.componentSide(handleOnChange, nameForm, lastNameForm, emailForm, handleSubmitForm)}
-        info={setInfos(INFO_SECTIONS[formSection.info], formSection.components, formSection.isReverse)}
-      />
-
-      <Footer />
+      <Feature
+        id="#subscribe"
+        idSection={10}
+        featureInfo={subscribeInfo.toJS()}
+      >
+        <Form
+          info={subscribeInfo.toJS()}
+          onChange={handleOnChange}
+          name={nameForm}
+          lastname={lastNameForm}
+          email={emailForm}
+          submitForm={handleSubmitForm}
+        />
+      </Feature>
     </Container>
-  )
-}
+  );
+};
 
 LayoutHome.propTypes = {
   handleOnChange: func,
   nameForm: string,
   lastNameForm: string,
   emailForm: string,
-  handleSubmitForm: func,
-  isVisibleOffCanvas: bool,
-  handleClickMenu: func
-}
+  handleSubmitForm: func
+};
 
 export default LayoutHome;
