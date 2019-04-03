@@ -3,10 +3,12 @@ import { Switch, Route } from 'react-router'
 
 // SCREENS
 import Home from 'containers/Home';
+import Disruption from 'components/LayoutDisruption';
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={Home} />
+    <Route exact strict path="/" component={Home} />
+    <Route exact strict path="/disruption" component={Disruption} />
   </Switch>
 )
 

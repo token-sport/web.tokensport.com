@@ -9,14 +9,14 @@ import LinksContainer from "./styles";
 
 const Links = ({ arrLink, isColumn, handleClickMenu }) => (
   <LinksContainer isColumn={isColumn}>
-    {arrLink.map(link => (
-      <Link 
-        key={link.name}
+    {
+      arrLink.map((link, index) => <Link
+        key={index}
         path={link.path}
         handleClickMenu={handleClickMenu}>
-        {link.name}
-      </Link>
-    ))}
+        { link.name }
+      </Link>)
+    }
   </LinksContainer>
 );
 

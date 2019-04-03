@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Button = styled.button.attrs((onClick) => ({ onClick }))`
+  position: relative;
   text-transform: uppercase; 
   border-radius: ${({ theme }) => theme.radius.soft};
   width: ${({ small }) => small ? '120px' : '170px'};
@@ -16,10 +17,13 @@ export const Button = styled.button.attrs((onClick) => ({ onClick }))`
   letter-spacing: 0.5px;
   margin: ${({ margin }) => margin};
   font-size: 14px;
+  z-index: 99;
+
   :active {
     transition: 500ms;
     transform: scale(0.9);
   }
+
   :focus {
     outline: none;
   }

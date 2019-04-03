@@ -1,27 +1,62 @@
-import React from 'react';
-import { bool, func } from 'prop-types';
+import React, { useCallback } from 'react';
+import { useMappedState, useDispatch } from 'redux-react-hook';
 
 // COMPONENTS
 import Links from 'components/shared/Links';
 
+// TYPES
+import { SWITCH_PATH_LOCATION } from 'actionTypes/';
+import { SWITCH_OFF_CANVAS_VISIBILITY } from 'actionTypes/';
+
 // STYLES
 import OffCanvasMenuContainer from './styles';
 
-// FIXTURES
-import { LINKS } from 'fixture/';
+const OffCanvasMenu = () => {
 
-const OffCanvasMenu = ({ isVisibleOffCanvas, handleClickMenu }) => 
-  <OffCanvasMenuContainer 
-    isVisibleOffCanvas={isVisibleOffCanvas}>
-    <Links
-      arrLink={LINKS}
-      isColumn
-      handleClickMenu={handleClickMenu}/>
-  </OffCanvasMenuContainer>;
+  // REDUX Mapped HOOK
+  const mapState = useCallback(state => ({
+    navLinks: state.getIn(['language', 'contentLang', 'navLinks']),
+    isVisibleOffCanvas: state.getIn(['offCanvasVisibility', 'isVisible']),
+  }), [])
 
-OffCanvasMenu.propTypes = {
-  isVisibleOffCanvas: bool,
-  handleClickMenu: func
+  const {
+    navLinks,
+    isVisibleOffCanvas
+  } = useMappedState(mapState);
+
+  // REDUX Dispatch HOOK
+  const dispatch = useDispatch();
+
+  const changePathLocation = useCallback(value => {
+    return (
+      dispatch({
+        type: SWITCH_PATH_LOCATION,
+        value
+      }),
+      []
+    );
+  })
+
+  const handleClickMenu = useCallback(path => {
+    changePathLocation(path);
+    return (
+      dispatch({
+        type: SWITCH_OFF_CANVAS_VISIBILITY,
+        value: !isVisibleOffCanvas
+      }),
+      []
+    );
+  });
+
+  return (
+    <OffCanvasMenuContainer 
+      isVisibleOffCanvas={isVisibleOffCanvas}>
+      <Links
+        arrLink={navLinks.toJS()}
+        isColumn
+        handleClickMenu={handleClickMenu}/>
+    </OffCanvasMenuContainer>
+  );
 }
 
 export default OffCanvasMenu;
