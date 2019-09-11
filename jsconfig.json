@@ -15,9 +15,33 @@
          "routes/*": [
             "./src/routes/*"
          ],
+         "store/*": [
+            "./src/store/*"
+         ],
+         "actionTypes/*": [
+            "./src/actionTypes/*"
+         ],
+         "reducers/*": [
+            "./src/reducers/*"
+         ],
          "theme/*": [
             "./src/theme/*"
          ],
+         "constants/*": [
+            "./src/constants/*"
+         ],
+         "tools/*": [
+            "./src/tools/*"
+         ],
+         "fixture/*": [
+            "./src/fixture/*"
+         ],
+         "lang/*": [
+            "./src/lang/*"
+         ],
+         "config/*": [
+            "./src/config/*"
+         ]
       }
    }
 }
