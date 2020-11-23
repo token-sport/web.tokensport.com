@@ -9,10 +9,6 @@ import {
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  offset: theme.mixins.toolbar,
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   title: {
     flexGrow: 1,
   },
@@ -25,17 +21,9 @@ const Navigation = () => {
     <>
       <AppBar position="fixed" color="primary">
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="menu"
-            className={classes.menuButton}
-          ></IconButton>
           <Typography variant="h6" className={classes.title}>
-            Ignacio C.
+            Navigation. Usar una AppBar de Material-UI acá.
           </Typography>
-          <Button variant="text" color="inherit">
-            Button Example
-          </Button>
         </Toolbar>
       </AppBar>
       <div className={classes.offset}></div>

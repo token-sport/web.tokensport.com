@@ -15,7 +15,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <h1>Sidebar</h1>
+      <h1>Sidebar. Usar un Drawer o "Cajón" de Material-UI acá.</h1>
     </>
   );
 };
