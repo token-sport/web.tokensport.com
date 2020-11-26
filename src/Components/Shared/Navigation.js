@@ -1,32 +1,21 @@
 import React from "react";
-import {
-  AppBar,
-  Typography,
-  Toolbar,
-  makeStyles,
-  IconButton,
-  Button,
-} from "@material-ui/core";
-
-const useStyles = makeStyles((theme) => ({
-  title: {
-    flexGrow: 1,
-  },
-}));
+import { Navbar } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navigation = () => {
-  const classes = useStyles();
-
   return (
     <>
-      <AppBar position="fixed" color="primary">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Navigation. Usar una AppBar de Material-UI acá.
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <div className={classes.offset}></div>
+      <Navbar
+        classname="mb-5"
+        bg="primary"
+        fixed="top"
+        bsPrefix="navbar"
+        expand="lg"
+      >
+        <Navbar.Brand>
+          <h1>Token Sports</h1>
+        </Navbar.Brand>
+      </Navbar>
     </>
   );
 };

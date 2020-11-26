@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // COMPONENTS
 import Home from "./Components/Home";
@@ -14,10 +15,6 @@ import Legal from "./Components/Legal";
 export default function App() {
   return (
     <>
-      <h1>
-        App.js . Acá tienen que estar todos los React-Routes y Debería Mostrarse
-        la HomePage, NO este Texto.
-      </h1>
       <Router>
         <Switch>
           <Route path="/legal">
