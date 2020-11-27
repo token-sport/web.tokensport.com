@@ -1,10 +1,13 @@
 import React from "react";
+import { Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Footer = () => {
   return (
     <>
-      <h1>Footer. Usar una BottomNavigation o similar de Bootstrap 4 acá.</h1>
+      <Navbar bg="primary" fixed="bottom" bsPrefix="navbar" expand="lg">
+        <h1>#LETYOURPASSIONFLOW</h1>
+      </Navbar>
     </>
   );
 };
