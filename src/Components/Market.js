@@ -19,8 +19,8 @@ const Market = () => {
             <div className="mt-5">
               <h1>Market</h1>
             </div>
-            <EndOfPage />
           </Col>
+          <EndOfPage />
         </Row>
       </Container>
       <Footer />

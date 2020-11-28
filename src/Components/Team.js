@@ -19,8 +19,8 @@ const Team = () => {
             <div className="mt-5">
               <h1>DreamTeam</h1>
             </div>
-            <EndOfPage />
           </Col>
+          <EndOfPage />
         </Row>
       </Container>
       <Footer />

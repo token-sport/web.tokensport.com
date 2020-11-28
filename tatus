@@ -1,0 +1,35 @@
+[33mcommit e9709945eb1f54ab698a5578c53070d2d3f6d166[m[33m ([m[1;36mHEAD -> [m[1;32mupdate/newWebsite[m[33m, [m[1;31morigin/update/newWebsite[m[33m)[m
+Author: Nachoxt17 <nacho.man.kpo@hotmail.com>
+Date:   Fri Nov 27 19:49:59 2020 -0300
+
+    5th Commit
+
+[33mcommit 8a8cb2b7c92d80409dbd57f04d00ab05b3f71e97[m
+Author: Nachoxt17 <nacho.man.kpo@hotmail.com>
+Date:   Thu Nov 26 17:50:59 2020 -0300
+
+    Added Bootstrap 4 and changed some Stuff
+
+[33mcommit 743f542d9eb06d84795ff435fc1ffb782c653853[m
+Author: Nachoxt17 <nacho.man.kpo@hotmail.com>
+Date:   Mon Nov 23 15:52:12 2020 -0300
+
+    Added React Routs
+
+[33mcommit e9fdcb4b18f3afe733b0aaa5c362966bb518d41b[m
+Author: Nachoxt17 <nacho.man.kpo@hotmail.com>
+Date:   Mon Nov 23 15:29:57 2020 -0300
+
+    Made Basic Structure of the Project
+
+[33mcommit 57bd77ba7adf0aa355517b513b87f960c536e823[m
+Author: Nachoxt17 <nacho.man.kpo@hotmail.com>
+Date:   Sun Nov 22 19:55:57 2020 -0300
+
+    First Commit
+
+[33mcommit d66de71d53d54b94e17abf68bb6f114c40165981[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Nachoxt17 <nacho.man.kpo@hotmail.com>
+Date:   Mon Nov 16 14:35:54 2020 -0300
+
+    Initialize project using Create React App

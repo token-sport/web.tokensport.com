@@ -19,8 +19,8 @@ const Legal = () => {
             <div className="mt-5">
               <h1>Legal</h1>
             </div>
-            <EndOfPage />
           </Col>
+          <EndOfPage />
         </Row>
       </Container>
       <Footer />
